@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/topbar.css'
+import '../styles/responsive.css'
 import Logo from "../images/logo.png"
 import { BsFillCalendarCheckFill } from 'react-icons/bs'
 const TopBar = () => {
@@ -7,7 +8,7 @@ const TopBar = () => {
         <div>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
+                    <div className="col-md-3 logo_main">
                         <img src={Logo} alt="logo" className='logo_top' />
                     </div>
                     <div className="col-md-6 top_second">

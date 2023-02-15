@@ -1,0 +1,22 @@
+@media (max-width:1000px){
+    .logo_main {
+        padding-top: 2%;
+        text-align: center;
+    }
+    .top_second {
+        display: none;
+    }
+    .top_third {
+        display: block;
+        margin: auto;
+    }
+  }
+  @media (max-width:765px){
+    .top_third {
+        margin-top: 3%;
+        text-align: center;
+    }
+    .top_third .apply_button {
+        width: 60%;
+    }
+  }
