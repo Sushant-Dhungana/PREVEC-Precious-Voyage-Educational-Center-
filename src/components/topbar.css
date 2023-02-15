@@ -1,5 +1,49 @@
 .logo_top {
-    width: 150px;
-    height: 80px;
+    width: 130px;
+    height: 60px;
     background-size: contain;
 }
+ .top_second 
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.book_appointment {
+    display: flex;
+}
+.book_appointment a {
+    text-decoration: none;
+    color: rgb(37, 36, 36);
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.event_registration {
+    display: flex;
+    margin-left: 10%;
+}
+.event_registration a {
+    text-decoration: none;
+    color: rgb(37, 36, 36);
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+.top_third {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.apply_button{
+    background-color: #C75934;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
