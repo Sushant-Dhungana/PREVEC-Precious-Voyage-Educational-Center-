@@ -1,17 +1,38 @@
 @media (max-width:1000px){
     .logo_main {
-        padding-top: 2%;
         text-align: center;
+    }
+    .logo_top {
+        width: 100px;
+        height: 40px;
     }
     .top_second {
         display: none;
     }
     .top_third {
         display: block;
-        margin: auto;
+        margin:  auto;
+        margin-left: 50%;
+    }
+    .apply_button{
+        background-color: #C75934;
+        border: none;
+        padding: 3px 10px;
+        border-radius: 5px;
+        margin-left: 20px;
+        color: #fff;
     }
   }
   @media (max-width:765px){
+    .top_third  {
+        display: block;
+        margin: 0 auto;
+    }
+  }
+  @media (max-width:765px){
+    .logo_main {
+       padding-top: 2%;
+    }
     .top_third {
         margin-top: 3%;
         text-align: center;

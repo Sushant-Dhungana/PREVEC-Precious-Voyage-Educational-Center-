@@ -1,9 +1,10 @@
 import React from 'react'
+import "../styles/navbar.css"
 
 const NavBar = () => {
   return (
-    <div>
-      <h6>I am Header</h6>
+    <div className="navbar_top">
+    
     </div>
   )
 }

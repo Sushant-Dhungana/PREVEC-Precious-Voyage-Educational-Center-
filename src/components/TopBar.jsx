@@ -5,7 +5,7 @@ import Logo from "../images/logo.png"
 import { BsFillCalendarCheckFill } from 'react-icons/bs'
 const TopBar = () => {
     return (
-        <div>
+        <div className='topbar_main'>
             <div className="container">
                 <div className="row">
                     <div className="col-md-3 logo_main">
