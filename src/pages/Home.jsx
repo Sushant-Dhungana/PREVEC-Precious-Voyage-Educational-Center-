@@ -1,9 +1,10 @@
 import React from 'react'
+import CarouselMain from '../components/Carousel'
 
 const Index = () => {
   return (
     <div>
-      <h6>I am Index</h6>
+      <CarouselMain/>
     </div>
   )
 }
