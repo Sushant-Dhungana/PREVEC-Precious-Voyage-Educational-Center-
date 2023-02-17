@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -35,31 +35,32 @@ const CarouselMain = () => {
     };
 
     return (
-        <div className='carousel_main'>    <Slider {...settings}>
-            <div>
-                <h3><img src={banner} alt="banner" /></h3>
-            </div>
-            <div>
-                <h3><img src={banner} alt="banner" /></h3>
-            </div>
-            <div>
-                <h3><img src={banner} alt="banner" /></h3>
-            </div>
-            <div>
-                <h3><img src={banner} alt="banner" /></h3>
-            </div>
-            <div>
-                <h3><img src={banner} alt="banner" /></h3>
-            </div>
-            <div>
-                <h3><img src={banner} alt="banner" /></h3>
-            </div>
-        </Slider>
+        <div className='carousel_main'>
+            <Slider {...settings}>
+                <div>
+                    <h3><img src={banner} alt="banner" /></h3>
+                </div>
+                <div>
+                    <h3><img src={banner} alt="banner" /></h3>
+                </div>
+                <div>
+                    <h3><img src={banner} alt="banner" /></h3>
+                </div>
+                <div>
+                    <h3><img src={banner} alt="banner" /></h3>
+                </div>
+                <div>
+                    <h3><img src={banner} alt="banner" /></h3>
+                </div>
+                <div>
+                    <h3><img src={banner} alt="banner" /></h3>
+                </div>
+            </Slider>
             <Navbar collapseOnSelect expand="lg">
                 <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="m-auto">
+                        <Nav className="m-auto justify-content-between flex-grow-1">
                             <Nav.Link href="/">Home</Nav.Link>
                             <NavDropdown title="Services" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -67,7 +68,6 @@ const CarouselMain = () => {
                                     Another action
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
@@ -78,7 +78,6 @@ const CarouselMain = () => {
                                     Another action
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
@@ -89,7 +88,6 @@ const CarouselMain = () => {
                                     Another action
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
@@ -100,7 +98,6 @@ const CarouselMain = () => {
                                     Another action
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
@@ -111,25 +108,23 @@ const CarouselMain = () => {
                                     Another action
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="#gallery">Gallery</Nav.Link>
+                            <Nav.Link href="#career">Career</Nav.Link>
                             <NavDropdown title="Information" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">
                                     Another action
                                 </NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Link href="#contact">Contact</Nav.Link>
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
