@@ -12,7 +12,7 @@ const NavBar = () => {
                 <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="m-auto justify-content-between flex-grow-1">
+                        <Nav className="m-auto justify-content-between flex-grow-1" defaultActiveKey="/">
                             <Nav.Link href="/">Home</Nav.Link>
                             <NavDropdown title="Services" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="/">Action</NavDropdown.Item>

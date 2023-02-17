@@ -32,6 +32,7 @@ const CarouselMain = () => {
 
     return (
         <div className='carousel_main'>
+            <div className="slick_slider">
             <Slider {...settings}>
                 <div>
                     <h3><img src={banner} alt="banner" /></h3>
@@ -52,6 +53,7 @@ const CarouselMain = () => {
                     <h3><img src={banner} alt="banner" /></h3>
                 </div>
             </Slider>
+            </div>
         <NavBar/>
         </div>
     )

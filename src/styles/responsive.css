@@ -24,6 +24,7 @@
     }
     .carousel_main {
         margin-top: 2%;
+        height: 300px;
     }
     .carousel_main img {
         width: 100%;
