@@ -15,7 +15,7 @@ const NavBar = () => {
                         <Nav className="m-auto justify-content-between flex-grow-1">
                             <Nav.Link href="/">Home</Nav.Link>
                             <NavDropdown title="Services" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                                <NavDropdown.Item href="/">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">
                                     Another action
                                 </NavDropdown.Item>

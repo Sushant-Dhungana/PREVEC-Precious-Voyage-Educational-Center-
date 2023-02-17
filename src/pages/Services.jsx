@@ -1,8 +1,9 @@
 import React from 'react'
+import CarouselMain from '../components/Carousel'
 const Services = () => {
   return (
     <div>
-      <h6>I am services</h6>
+      <CarouselMain/>
     </div>
   )
 }

@@ -1,56 +1,90 @@
 .carousel_main {
-    position: relative;
+  position: relative;
 }
+
 .carousel_main img {
-    width: 100%;
-    height: 720px;
-    object-fit: fill;
+  width: 100%;
+  height: 720px;
+  object-fit: fill;
 }
+
 .slick-prev {
-    left: 3% !important;
-    z-index: 1;
-  }
-  .slick-next {
-    right: 3% !important;
-    z-index: 1;
-  }
-  .slick-prev::before {
-    font-size: 45px;
-    color: #6b99e9;
-  }
-  .slick-next::before {
-    font-size: 45px;
-    color: #6b99e9;
-  }
-  .slick-dots {
-    bottom: 30px;}
-  .slick-dots li.slick-active button:before {
-    color: #d61717;
-  }
-  .slick-dots li button:before {
-    font-size: 16px;
-    color: #6b99e9;
-  }
-  nav.navbar {
-    position: absolute;
-    top: 0;
-    width: 90%;
-    text-align: center;
-    left: 5%;
-    background-color: #1174BC;
-    padding: 10px;
-  }
-  a.nav-link {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    padding-top: 5px;
-    border-radius: 5px;
-  }
-  /* .dropdown-toggle::after {
+  left: 3% !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+}
+
+.slick-prev::before {
+  font-size: 45px;
+  color: #6b99e9;
+}
+
+.slick-next::before {
+  font-size: 45px;
+  color: #6b99e9;
+}
+
+.slick-dots {
+  bottom: 30px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #d61717;
+}
+
+.slick-dots li button:before {
+  font-size: 16px;
+  color: #6b99e9;
+}
+
+nav.navbar {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  text-align: center;
+  left: 5%;
+  background-color: #1174BC;
+  padding: 10px;
+}
+
+a.nav-link {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 5px;
+  border-radius: 5px;
+}
+
+/* .dropdown-toggle::after {
     display: none;
   } */
-  /* a.nav-link {
+/* a.nav-link {
     margin-right: 50px;
   } */
+a.nav-link:hover {
+  color: #eb8867 !important;
+}
 
+a.nav-link.active {
+  height: 100%;
+  color: #eb8867 !important;
+}
+.dropdown.active {
+  background-color: #1174BC !important;
+  border: none;
+  padding: 7px 20px;
+  border-radius: 5px;
+  margin-left: 20px;
+  color: #fff;
+}
+a#collasible-nav-dropdown.active {
+  color: #eb8867 !important;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 5px;
+  border-radius: 5px;
+}
