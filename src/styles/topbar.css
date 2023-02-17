@@ -48,4 +48,10 @@
     margin-left: 20px;
     color: #fff;  
 }
+.apply_button:hover {
+    background-color: #ffffff;
+    color: #c75934;
+    border: 1px solid #c75934;
+}
+
 

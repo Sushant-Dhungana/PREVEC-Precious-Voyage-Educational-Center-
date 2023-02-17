@@ -22,8 +22,10 @@
     font-size: 45px;
     color: #6b99e9;
   }
+  .slick-dots {
+    bottom: 30px;}
   .slick-dots li.slick-active button:before {
-    color: #C75934;
+    color: #d61717;
   }
   .slick-dots li button:before {
     font-size: 16px;
