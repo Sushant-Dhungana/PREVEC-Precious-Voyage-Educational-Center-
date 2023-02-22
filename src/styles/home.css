@@ -4,13 +4,21 @@
 } */
 .mission {
     background-color: #C75934;
-    height: 200px;
 }
 .vision {
     background-color: #1174BC;
-    height: 200px;
 }
 .goal {
     background-color: #C75934;
-    height: 200px;
+}
+.main_logo {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+}
+.mvg_main {
+    padding-top: 3%;
+    color: #fff;
+    text-align: justify;
+    padding-right: 20px;
 }
