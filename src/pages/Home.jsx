@@ -7,6 +7,7 @@ import { GiTargetArrows } from "react-icons/gi";
 import img2 from "../images/graduate.png";
 import img3 from "../images/banner.png";
 import {AiOutlineArrowRight} from "react-icons/ai";
+import StudyAbroad from '../components/StudyAbroad';
 
 const Index = () => {
   return (
@@ -112,6 +113,9 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section className='study_abroad'>
+        <StudyAbroad/>
       </section>
     </div>
   )

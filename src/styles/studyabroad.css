@@ -1,0 +1,47 @@
+.card_col {
+    display: flex;
+    justify-content: center;
+}
+.card_main {
+    border-radius: 10px;
+    background-color: #fff;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.98);
+    padding-bottom: 5%;
+    position: relative;
+
+}
+.card_image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+.above_abroad {
+    position: absolute;
+    height: 100px;
+    width:100px;
+    top: 35%;
+    left: 28%;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.above_abroad img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    display: block;
+    
+}
+.card_main h6 {
+    margin-top: 25%;
+    margin-left: 2%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #1174BC;
+}

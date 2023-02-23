@@ -40,18 +40,18 @@
     align-items: center;
     justify-content: flex-end;
 }
-.apply_button{
-    background-color: #C75934;
+
+.read_more {
+    background-color: #1174BC;
     border: none;
     padding: 7px 20px;
     border-radius: 5px;
-    margin-left: 20px;
-    color: #fff;  
+    color: #fff;
+    border: 1px solid #1174BC;
 }
-.apply_button:hover {
+.read_more:hover {
     background-color: #ffffff;
-    color: #c75934;
-    border: 1px solid #c75934;
+    color: #1174BC;
 }
 
 

@@ -34,6 +34,7 @@
     nav.navbar {
         width: 100%;
         left: 0%;
+        z-index: 99;
       }
     a.nav-link {
         display: flex;
@@ -41,8 +42,31 @@
         align-items: center;
         padding-left: 5%;
     }
+    .mission_vision_goal {
+        display: none;
+    }
 
 
+  }
+  @media (max-width:1000px) and (min-width:765px){
+    .circle {
+        width: 75px;
+        height: 75px;
+    }
+    .circle img {
+        width: 70px;
+        height: 70px;
+        top: 5%;
+        left: 5%;
+    }
+    .about_us {
+        margin-top: 5%;
+    }
+    .index_about_img img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
   }
   @media (max-width:765px){
     .top_third  {
@@ -51,6 +75,35 @@
     }
     .functions_column {
         margin-top: 2%;
+    }
+    .main_logo {
+        margin-top: 2%;
+        justify-content:center;
+    }
+    .index_about_img img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .above_abroad {
+        position: absolute;
+        height: 100px;
+        width:100px;
+        top: 35%;
+        left: 34%;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+    .above_abroad img {
+        width: 85px;
+        height: 85px;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 7%;
+        left: 7%;
+        display: block;
+        
     }
   }
   @media (max-width:765px){
