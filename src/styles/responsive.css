@@ -45,8 +45,20 @@
     .mission_vision_goal {
         display: none;
     }
-
-
+    .top_third .apply_button {
+        width: 135px;
+        height: 38px;
+    
+    }
+    .apply_button{
+        position: absolute;
+      
+        z-index: 9999;
+        right: 21px;
+    }
+.offcanvas{
+    z-index: 10000;
+}
   }
   @media (max-width:1000px) and (min-width:765px){
     .circle {
@@ -114,7 +126,42 @@
         margin-top: 3%;
         text-align: center;
     }
-    .top_third .apply_button {
-        width: 60%;
+  
+  
+  }
+  @media (max-width:400px){
+    .apply_button{
+        position: absolute;
+        top: 77px;
+        z-index: 9999;
+        right: 21px;
+    }
+  }
+  @media (min-width:400px) and (max-width:450px){
+    .apply_button{
+       
+        top: 81px;
+       
+    }
+  }
+  @media (min-width:450px) and (max-width:525px){
+    .apply_button{
+       
+        top: 86px;
+      
+    }
+  }
+  @media (min-width:525px) and (max-width:766px){
+    .apply_button{
+        
+        top: 91px;
+       
+    }
+  }
+  @media (min-width:766px) and (max-width:1000px){
+    .apply_button{
+       
+        top: 68px;
+       
     }
   }
