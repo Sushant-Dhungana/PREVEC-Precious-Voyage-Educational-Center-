@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import CarouselMain from '../components/Carousel'
 import "../styles/home.css"
 import "../styles/navbar.css"
@@ -6,10 +6,23 @@ import { IoRocketSharp, IoTelescope } from "react-icons/io5";
 import { GiTargetArrows } from "react-icons/gi";
 import img2 from "../images/graduate.png";
 import img3 from "../images/banner.png";
-import {AiOutlineArrowRight} from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import StudyAbroad from '../components/StudyAbroad';
 
 const Index = () => {
+  // const [user, setUser] = useState([]);
+
+  // const fetchData = () => {
+  //   return fetch("https://jsonplaceholder.typicode.com/users")
+  //     .then((response) => response.json())
+  //     .then((data) => setUser(data));
+  // }
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, [])
+  // console.log(user);
+
   return (
     <div>
       <CarouselMain />
@@ -109,13 +122,21 @@ const Index = () => {
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae id eos provident quia a delectus, tempore, optio itaque magni et inventore cum totam sed. Error laborum ducimus dolor nostrum vitae.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim inventore corrupti modi ullam est commodi. Hic, illum nesciunt. Ex libero iste alias debitis dignissimos iusto beatae in rem maiores! Natus!
               </p>
-              <button className="read_more">Read More <AiOutlineArrowRight/></button>
+              <button className="read_more">Read More <AiOutlineArrowRight /></button>
             </div>
           </div>
         </div>
       </section>
       <section className='study_abroad'>
-        <StudyAbroad/>
+        <h3>Study Abroad</h3>
+        <div className="after_line_abroad"></div>
+               {/* {user &&
+          user.map((item, index) => (
+            <StudyAbroad key={index} {...item} />
+          ))}
+        </div> */}
+       
+        <StudyAbroad />
       </section>
     </div>
   )

@@ -45,20 +45,47 @@
     .mission_vision_goal {
         display: none;
     }
-
-
+    .card_main {
+        margin-top: 3%;
+    }
+    .study_abroad {
+        margin-top: 5%;
+    }
+    .after_line_abroad {
+        width: 30%;
+        margin-bottom: 3% !important;
+    }
+    .study_abroad {
+        background: none;
+    }
+  }
+  @media (max-width:1200px){
+    .above_abroad {
+        left: 22%;
+    }
   }
   @media (max-width:1000px) and (min-width:765px){
+    .card_col {
+        width: 100%;
+    }
+    .card_image {
+        width: 100%;
+        height: 200px;
+    }
+    .above_abroad {
+        left: 40%;
+    }
     .circle {
-        width: 75px;
-        height: 75px;
+        width: 55px;
+        height: 55px;
     }
     .circle img {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         top: 5%;
         left: 5%;
     }
+
     .about_us {
         margin-top: 5%;
     }
@@ -66,6 +93,29 @@
         width: 100%;
         height: 200px;
         object-fit: cover;
+    }
+    .above_abroad {
+        position: absolute;
+        height: 120px;
+        width:120px;
+        top: 40%;
+        left: 38%;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+    .above_abroad img {
+        width: 105px;
+        height: 105px;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 6%;
+        left: 6.5%;
+        display: block;
+        
+    }
+    .card_main h6 {
+        margin-top: 15%;
     }
   }
   @media (max-width:765px){
@@ -89,8 +139,8 @@
         position: absolute;
         height: 100px;
         width:100px;
-        top: 35%;
-        left: 34%;
+        top: 34%;
+        left: 36%;
         background-color: #fff;
         border-radius: 50%;
     }
@@ -105,6 +155,10 @@
         display: block;
         
     }
+    .card_main h6 {
+        margin-top: 15%;
+    }
+    
   }
   @media (max-width:765px){
     .logo_main {

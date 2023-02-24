@@ -86,4 +86,21 @@
 }
 .study_abroad {
     margin-top: 3%;
+    background: url(../images//studyabroadbackground.png) no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 5%;
+}
+
+.study_abroad h3 {
+    color: #1174BC;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+.after_line_abroad {
+    width: 10%;
+    height: 3px;
+    background-color: #c75934;
+    margin-bottom:2% !important;
+    margin: 0 auto;
 }

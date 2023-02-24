@@ -18,8 +18,15 @@
 .learn_more button {
     background-color: #C75934;
     border: none;
-    padding: 7px 20px;
+    padding: 5px 10px;
     border-radius: 5px;
     color: #fff;
     width: 70%;
+    border: 1px solid #c75934;
+}
+.learn_more button:hover {
+    background-color: #ffffff;
+    color: #c75934;
+    border: 1px solid #c75934;
+    font-weight: bold;
 }
