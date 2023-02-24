@@ -31,10 +31,10 @@ const NavBar = () => {
                 <Nav className="justify-content-between flex-grow-1 pe-3">
                   <Nav.Link href="#">Home</Nav.Link>
                   <NavDropdown
-                    title="Dropdown"
+                    title="Services"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#">Services</NavDropdown.Item>
                     <NavDropdown.Item href="#">
                       Another action
                     </NavDropdown.Item>
@@ -45,14 +45,85 @@ const NavBar = () => {
                       Something else here
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#">Link</Nav.Link>
-                  <Nav.Link href="#">Link</Nav.Link>
-                  <Nav.Link href="#">Link</Nav.Link>
-                  <Nav.Link href="#">Link</Nav.Link>
-                  <Nav.Link href="#">Link</Nav.Link>
-                  <Nav.Link href="#">Link</Nav.Link>
-                  <Nav.Link href="#">Link</Nav.Link>
-              
+                  <NavDropdown
+                    title="Study Abroad"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Study Abroad</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown
+                    title="About"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">About</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown
+                    title="Preparation"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Preparation</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+               
+                  <NavDropdown
+                    title="Courses"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Courses</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <Nav.Link href="#">Gallery</Nav.Link>
+                  <NavDropdown
+                    title="Career"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Career</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <Nav.Link href="#">Information</Nav.Link>
+                  <Nav.Link href="#">Contact Us</Nav.Link>
                 </Nav>
              
               </Offcanvas.Body>
