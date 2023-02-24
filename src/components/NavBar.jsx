@@ -1,88 +1,139 @@
-import React from 'react'
-import "../styles/navbar.css"
+import React from 'react';
+import "../styles/navbar.css";
+import Logo from "../images/logo.png";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const NavBar = () => {
   return (
-    <div className="navbar_top">
-                <Navbar collapseOnSelect expand="lg">
-                <Container>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                    <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="m-auto justify-content-between flex-grow-1" defaultActiveKey="/">
-                            <Nav.Link href="/">Home</Nav.Link>
-                            <NavDropdown title="Services" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="/">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown title="Study Abroad" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown title="About" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown title="Preparation" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown title="Courses" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link href="#gallery">Gallery</Nav.Link>
-                            <Nav.Link href="#career">Career</Nav.Link>
-                            <NavDropdown title="Information" id="collasible-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link href="#contact">Contact</Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-    </div>
-  )
+    
+    <>
+      {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
+        <div className="navbar_top">
+        <Navbar key={expand} expand={expand} className="mb-3">
+          <Container fluid>
+           
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="start"
+            >
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <img src={Logo} alt="logo" className='logo_top' />
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <Nav className="justify-content-between flex-grow-1 pe-3">
+                  <Nav.Link href="#">Home</Nav.Link>
+                  <NavDropdown
+                    title="Services"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Services</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown
+                    title="Study Abroad"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Study Abroad</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown
+                    title="About"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">About</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown
+                    title="Preparation"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Preparation</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+               
+                  <NavDropdown
+                    title="Courses"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Courses</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <Nav.Link href="#">Gallery</Nav.Link>
+                  <NavDropdown
+                    title="Career"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#">Career</NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#">
+                      Something else here
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <Nav.Link href="#">Information</Nav.Link>
+                  <Nav.Link href="#">Contact Us</Nav.Link>
+                </Nav>
+             
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+        </Navbar>
+        </div>
+      ))}
+    </>
+  );
 }
 
 export default NavBar

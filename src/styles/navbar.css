@@ -1,13 +1,19 @@
+
+
 nav.navbar {
     position: absolute;
     top: 0;
     width: 90%;
     text-align: center;
     left: 5%;
-    background-color: #1174BC;
+    background-color: #1174BC !important;
     padding: 10px;
   }
-  
+
+
+  .offcanvas-body{
+    background-color: #1174BC;
+  }
   a.nav-link {
     color: #fff;
     font-size: 16px;
