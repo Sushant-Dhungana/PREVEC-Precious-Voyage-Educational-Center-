@@ -9,10 +9,9 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const NavBar = () => {
   return (
-    
     <>
-      {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
-        <div className="navbar_top">
+      {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand, index) => (
+        <div className="navbar_top" key={index}>
         <Navbar key={expand} expand={expand} className="mb-3">
           <Container fluid>
            
