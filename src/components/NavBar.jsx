@@ -121,8 +121,8 @@ const NavBar = () => {
                       Something else here
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#">Information</Nav.Link>
-                  <Nav.Link href="#">Contact Us</Nav.Link>
+                  <Nav.Link href="#asas">Information</Nav.Link>
+                  <Nav.Link href="#asa">Contact Us</Nav.Link>
                 </Nav>
              
               </Offcanvas.Body>

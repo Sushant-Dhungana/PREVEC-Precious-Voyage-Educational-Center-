@@ -6,8 +6,10 @@ import { IoRocketSharp, IoTelescope } from "react-icons/io5";
 import { GiTargetArrows } from "react-icons/gi";
 import img2 from "../images/graduate.png";
 import img3 from "../images/banner.png";
+import img4 from "../images/servicesimage.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import StudyAbroad from '../components/StudyAbroad';
+import {FcServices} from "react-icons/fc";
 
 const Index = () => {
   // const [user, setUser] = useState([]);
@@ -130,13 +132,48 @@ const Index = () => {
       <section className='study_abroad'>
         <h3>Study Abroad</h3>
         <div className="after_line_abroad"></div>
-               {/* {user &&
+        {/* {user &&
           user.map((item, index) => (
             <StudyAbroad key={index} {...item} />
           ))}
         </div> */}
-       
         <StudyAbroad />
+      </section>
+      <section className="index_services">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="services_head">
+                <FcServices size={50}/>
+                <h3>Our Services</h3>
+              </div>
+              <div className="after_line_services"></div>
+              <h5 className="services_motto">We Provide Better and Lifting Up Opportunities</h5>
+            </div>
+            <div className="col-md-9 services_content">
+              <h4>Study Abroad</h4>
+              <p>Are you preparing to study abroad? Study in USA, Australia, UK, Canada, New-Zealand, Europe etc. We provide you tips and advice on studying abroad,choosing the right country, university and program. Students studying abroad become generation of globally-minded adventurers and leaders - and we want more of you to do it!...</p>
+            </div>
+            <div className="col-md-3 services_image">
+              <img src={img4} alt="logo" />
+            </div>
+            <div className="col-md-3 services_image">
+              <img src={img4} alt="logo" />
+            </div>
+            <div className="col-md-9 services_content">
+              <h4>Study Abroad</h4>
+              <p>Are you preparing to study abroad? Study in USA, Australia, UK, Canada, New-Zealand, Europe etc. We provide you tips and advice on studying abroad,choosing the right country, university and program. Students studying abroad become generation of globally-minded adventurers and leaders - and we want more of you to do it!...</p>
+            </div>
+            <div className="col-md-9 services_content">
+              <h4>Study Abroad</h4>
+              <p>Are you preparing to study abroad? Study in USA, Australia, UK, Canada, New-Zealand, Europe etc. We provide you tips and advice on studying abroad,choosing the right country, university and program. Students studying abroad become generation of globally-minded adventurers and leaders - and we want more of you to do it!...</p>
+            </div>
+            <div className="col-md-3 services_image">
+              <img src={img4} alt="logo" />
+            </div>
+          </div>
+        </div>
+
       </section>
     </div>
   )

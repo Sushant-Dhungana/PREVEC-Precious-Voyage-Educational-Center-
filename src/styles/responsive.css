@@ -131,6 +131,9 @@
     .card_main h6 {
         margin-top: 15%;
     }
+    .services_image img {
+        object-fit: contain;
+    }
   }
   @media (max-width:765px){
     .top_third  {
@@ -172,7 +175,19 @@
     .card_main h6 {
         margin-top: 15%;
     }
-    
+    .after_line_services {
+        width: 30%;
+        height: 3px;
+        background-color: #c75934;
+        margin-bottom:2% !important;
+        margin: 5px 44%;
+    }
+    .services_motto {
+        margin-top: 5%;
+    }
+    .services_image img {
+      width: 80%;
+    }
   }
   @media (max-width:765px){
     .logo_main {

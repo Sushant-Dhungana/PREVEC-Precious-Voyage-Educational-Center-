@@ -104,3 +104,48 @@
     margin-bottom:2% !important;
     margin: 0 auto;
 }
+.index_services {
+    margin-top: 3%;
+}
+.services_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+.after_line_services {
+    width: 13%;
+    height: 3px;
+    background-color: #c75934;
+    margin-bottom:2% !important;
+    margin: 5px 46%;
+}
+.services_motto {
+    text-align: center;
+    color: #585756;
+    font-size: 18px;
+    font-weight: 500;
+}
+.services_content {
+    margin-top: 3%;
+}
+.services_content h4 {
+    color: #1174BC;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.services_content p {
+    color: #585756;
+    text-align: justify;
+    padding: 10px;
+}
+.services_image {
+    margin-top: 3%;
+    text-align: center;
+}
+.services_image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
