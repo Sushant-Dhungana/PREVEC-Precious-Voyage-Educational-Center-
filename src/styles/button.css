@@ -23,12 +23,12 @@
     color: #fff;
     width: 70%;
     border: 1px solid #c75934;
+    transition: ease all 0.5s;
 }
 .learn_more button:hover {
     background-color: #ffffff;
     color: #c75934;
     border: 1px solid #c75934;
-    font-weight: bold;
 }
 .read_more {
     background-color: #1174BC;
@@ -42,4 +42,5 @@
 .read_more:hover {
     background-color: #ffffff;
     color: #1174BC;
+
 }

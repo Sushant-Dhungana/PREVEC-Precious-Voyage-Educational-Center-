@@ -1,76 +1,36 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import CarouselMain from '../components/Carousel'
 import "../styles/home.css"
 import "../styles/navbar.css"
-import { IoRocketSharp, IoTelescope } from "react-icons/io5";
-import { GiTargetArrows } from "react-icons/gi";
+
 import img2 from "../images/graduate.png";
 import img3 from "../images/banner.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import StudyAbroad from '../components/StudyAbroad';
 import axios from "axios";
 import OurServices from "../components/OurServices";
+import Associations from "../components/Associations";
+import MVG from "../components/MVG";
 
 
 const baseUrl = "http://192.168.1.2:8000/api";
 
 const Index = () => {
   const [homeData, setHomeData] = useState([]);
+  const [loading, isLoading] = useState(false);
   useEffect(() => {
     axios.get(baseUrl, {
     }).then((res) => {
       setHomeData(res.data);
-    }) 
+    })
   }, [setHomeData])
   // const studyAbroad = homeData.abroads;
 
   return (
     <div>
-          <CarouselMain slider={homeData.sliders}/>
+      <CarouselMain slider={homeData.sliders} />
       <section className='mission_vision_goal'>
-        <div className="container-fluid banner_below">
-          <div className="row">
-            <div className="col-md-4 mission">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-3 main_logo">
-                    <IoRocketSharp size={70} color="#fff" />
-                  </div>
-                  <div className="col-md-9 mvg_main">
-                    <h5>Mission</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 vision">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-3 main_logo">
-                    <IoTelescope size={70} color="#fff" />
-                  </div>
-                  <div className="col-md-9 mvg_main">
-                    <h5>vision</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 goal">
-              <div className="container">
-                <div className="row">
-                  <div className="col-md-3 main_logo">
-                    <GiTargetArrows size={70} color="#fff" />
-                  </div>
-                  <div className="col-md-9 mvg_main">
-                    <h5>Goal</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <MVG feature={homeData.features} />
       </section>
       <section className="functions">
         <div className="container">
@@ -131,10 +91,21 @@ const Index = () => {
       <section className='study_abroad'>
         <h3>Study Abroad</h3>
         <div className="after_line_abroad"></div>
-        <StudyAbroad studyabroad = {homeData.abroads}/>
+        <StudyAbroad studyabroad={homeData.abroads} />
       </section>
       <section className="index_services">
-      <OurServices services = {homeData.features} />
+        <OurServices services={homeData.features} />
+      </section>
+      <section className="index_associations">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 associations_head">
+              <h3>Our Associated Universities</h3>
+              <div className="after_line_associations"></div>
+              <Associations association={homeData.associations} />
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   )

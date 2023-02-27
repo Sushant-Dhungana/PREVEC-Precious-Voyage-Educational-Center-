@@ -1,0 +1,14 @@
+.owl-carousel .item img{
+    height: 200px;
+    height: 200px;
+}
+button.owl-next, button.owl-prev{
+    background-color: #1174BC;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    display: none;
+}

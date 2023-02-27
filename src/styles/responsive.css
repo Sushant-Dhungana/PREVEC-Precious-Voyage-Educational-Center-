@@ -58,6 +58,15 @@
     .study_abroad {
         background: none;
     }
+    .services_key {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+    }
+    .services_image img {
+        width: 300px !important;
+        height: 200px;
+    }
   }
   @media (max-width:1200px){
     .above_abroad {
@@ -187,6 +196,13 @@
     }
     .services_image img {
       width: 80%;
+    }
+    .after_line_associations {
+        width: 45%;
+    }
+    .index_about_content {
+        padding-left: 3%;
+        margin-top: 3%;
     }
   }
   @media (max-width:765px){
