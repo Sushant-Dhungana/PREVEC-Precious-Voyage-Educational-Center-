@@ -1,33 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import banner from '../images/japan_falg.jpg';
+import React from 'react';
 import '../styles/studyabroad.css';
 import "../styles/button.css"
-const StudyAbroad = () => {
-    const [user, setUser] = useState([]);
-
-    const fetchData = () => {
-        return fetch("https://jsonplaceholder.typicode.com/users")
-            .then((response) => response.json())
-            .then((data) => setUser(data));
-    }
-
-    useEffect(() => {
-        fetchData();
-    }, [])
+const StudyAbroad = (props) => {
+    const studyabroads = props.studyabroad;
     return (
         <div>
             <div className="container">
                 <div className="row">
-                    {user && user.slice(0, 4).map((item, index) => (
+                    {studyabroads && studyabroads.map((item, index) => (
                         <div className="col-md-3 card_col" key={index}>
                             <div className="card_main">
-                                <img src={banner} alt="logo" className='card_image' />
+                                <img src={"http://192.168.1.2:8000/images/abroad/"+ item.image} alt="logo" className='card_image' />
                                 <div className="above_abroad">
-                                    <img src={banner} alt="logo" />
+                                    <img src={"http://192.168.1.2:8000/images/abroad/banner/"+ item.banner} alt="logo" />
                                 </div>
-                                <h6>{item.name}</h6>
+                                <h6>{item.title}</h6>
                                 <div className="learn_more">
-                                    <button>{item.email}</button>
+                                    <button>Learn More</button>
                                 </div>
                             </div>
                         </div>

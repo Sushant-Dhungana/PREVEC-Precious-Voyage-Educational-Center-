@@ -30,3 +30,16 @@
     border: 1px solid #c75934;
     font-weight: bold;
 }
+.read_more {
+    background-color: #1174BC;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #1174BC;
+    transition: ease all 0.5s;
+}
+.read_more:hover {
+    background-color: #ffffff;
+    color: #1174BC;
+}

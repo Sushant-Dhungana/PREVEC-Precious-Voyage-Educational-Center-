@@ -3,10 +3,10 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import banner from "../images/banner.png"
 import "../styles/carousel.css"
 import NavBar from './NavBar';
-const CarouselMain = () => {
+const CarouselMain = (props) => {
+    const slider = props.slider;
     var settings = {
         dots: true,
         infinite: true,
@@ -30,31 +30,25 @@ const CarouselMain = () => {
         ],
     };
 
+
+
     return (
+
         <div className='carousel_main'>
             <div className="slick_slider">
-            <Slider {...settings}>
-                <div>
-                    <h3><img src={banner} alt="banner" /></h3>
-                </div>
-                <div>
-                    <h3><img src={banner} alt="banner" /></h3>
-                </div>
-                <div>
-                    <h3><img src={banner} alt="banner" /></h3>
-                </div>
-                <div>
-                    <h3><img src={banner} alt="banner" /></h3>
-                </div>
-                <div>
-                    <h3><img src={banner} alt="banner" /></h3>
-                </div>
-                <div>
-                    <h3><img src={banner} alt="banner" /></h3>
-                </div>
-            </Slider>
+                <Slider {...settings}>
+                    {
+                        slider && slider.map((item, index) => (
+                            <div key={index}>
+                                <h3>
+                                    <img src={"http://192.168.1.2:8000/images/slider/" + item.image} alt= {item.title} />
+                                </h3>
+                            </div>
+                        ))
+                    }
+                </Slider>
             </div>
-        <NavBar/>
+            <NavBar />
         </div>
     )
 }
