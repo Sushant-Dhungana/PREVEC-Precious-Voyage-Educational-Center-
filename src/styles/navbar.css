@@ -22,12 +22,6 @@ nav.navbar {
     border-radius: 5px;
   }
   
-  /* .dropdown-toggle::after {
-      display: none;
-    } */
-  /* a.nav-link {
-      margin-right: 50px;
-    } */
   a.nav-link:hover {
     color: #eb8867 !important;
   }

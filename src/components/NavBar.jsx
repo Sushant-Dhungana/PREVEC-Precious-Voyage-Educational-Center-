@@ -14,7 +14,6 @@ const NavBar = () => {
         <div className="navbar_top" key={index}>
         <Navbar key={expand} expand={expand} className="mb-3">
           <Container fluid>
-           
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}

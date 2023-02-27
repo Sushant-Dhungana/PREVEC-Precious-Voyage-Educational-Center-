@@ -67,6 +67,9 @@
         width: 300px !important;
         height: 200px;
     }
+    .offcanvas-body{
+        overflow-x: hidden;
+    }
   }
   @media (max-width:1200px){
     .above_abroad {
@@ -143,6 +146,7 @@
     .services_image img {
         object-fit: contain;
     }
+    
   }
   @media (max-width:765px){
     .top_third  {
