@@ -1,6 +1,7 @@
 import React from 'react'
 import { FcServices } from "react-icons/fc";
 import '../styles/services.css';
+const mvgUrl = process.env.baseUrl || "http://192.168.1.11:8000/images/feature/"
 
 const OurServices = (props) => {
   const regex = /(<([^>]+)>)/ig;
@@ -28,7 +29,7 @@ const OurServices = (props) => {
                       <p>{item.description.replace(regex, '')}</p>
                     </div>
                     <div className="col-md-3 services_image">
-                      <img src={"http://192.168.1.2:8000/images/feature/" + item.image} alt="logo" />
+                      <img src={mvgUrl + item.image} alt="logo" />
                     </div>
                     </div>
                 )
@@ -36,7 +37,7 @@ const OurServices = (props) => {
                 return (
                    <div className="services_key" key={index}>
                     <div className="col-md-3 services_image">
-                      <img src={"http://192.168.1.2:8000/images/feature/" + item.image} alt="logo" />
+                      <img src={mvgUrl + item.image} alt="logo" />
                     </div>
                     <div className="col-md-9 services_content">
                       <h4>{item.title}</h4>

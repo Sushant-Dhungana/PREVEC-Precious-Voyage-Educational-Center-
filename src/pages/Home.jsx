@@ -7,25 +7,22 @@ import img2 from "../images/graduate.png";
 import img3 from "../images/banner.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import StudyAbroad from '../components/StudyAbroad';
-import axios from "axios";
 import OurServices from "../components/OurServices";
 import Associations from "../components/Associations";
 import MVG from "../components/MVG";
 
-
-const baseUrl = "http://192.168.1.2:8000/api";
+import axiosBaseURL from "../baseUrl";
+import Testimonials from "../components/Testimonials";
 
 const Index = () => {
   const [homeData, setHomeData] = useState([]);
-  const [loading, isLoading] = useState(false);
   useEffect(() => {
-    axios.get(baseUrl, {
+    axiosBaseURL.get("/api/index", {
     }).then((res) => {
       setHomeData(res.data);
     })
   }, [setHomeData])
   // const studyAbroad = homeData.abroads;
-
   return (
     <div>
       <CarouselMain slider={homeData.sliders} />
@@ -106,6 +103,15 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section>
+      <section className="index_testimonials">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 about_us">
+              <Testimonials testimonal= {homeData.testimonals}/></div>
+          </div>
+        </div>
+
       </section>
     </div>
   )

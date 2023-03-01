@@ -5,6 +5,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/carousel.css"
 import NavBar from './NavBar';
+
+const imageUrl = process.env.baseUrl || "http://192.168.1.11:8000/images/slider/"
+
 const CarouselMain = (props) => {
     const slider = props.slider;
     var settings = {
@@ -41,7 +44,7 @@ const CarouselMain = (props) => {
                         slider && slider.map((item, index) => (
                             <div key={index}>
                                 <h3>
-                                    <img src={"http://192.168.1.2:8000/images/slider/" + item.image} alt= {item.title} />
+                                    <img src={imageUrl + item.image} alt= {item.title} />
                                 </h3>
                             </div>
                         ))

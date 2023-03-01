@@ -4,6 +4,8 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import "../styles/associations.css"
 
+const associationsUrl = process.env.baseUrl || "http://192.168.1.11:8000/images/association/"
+
 const Associations = ({association}) => {
     const associations = association;
     const options = {
@@ -11,7 +13,7 @@ const Associations = ({association}) => {
         responsiveClass: true,
         nav: true,
         autoplay: true,
-        navText: ["Prev", "Next"],
+        // navText: ["Prev", "Next"],
         smartSpeed: 1000,
         loop: true,
         responsive: {
@@ -37,7 +39,7 @@ const Associations = ({association}) => {
     <div>
 <OwlCarousel className="slider-items owl-carousel" {...options}>
     {associations && associations.map((item, index) => (
-                      <div className="item" key={index}><img src={"http://192.168.1.2:8000/images/association/"+ item.image} alt={item.id}/></div>
+                      <div className="item" key={index}><img src={associationsUrl + item.image} alt={item.id}/></div>
     ))}
 
                   </OwlCarousel>

@@ -63,6 +63,11 @@
         flex-direction: column;
         margin-top: 3%;
     }
+    .services_image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .services_image img {
         width: 300px !important;
         height: 200px;
@@ -146,6 +151,7 @@
     .services_image img {
         object-fit: contain;
     }
+
     
   }
   @media (max-width:765px){
@@ -207,6 +213,12 @@
     .index_about_content {
         padding-left: 3%;
         margin-top: 3%;
+    }
+    .testimonial_main img {
+        height: 100px !important;
+        width: 100px !important;
+        border-radius: 50%;
+        left: 40%;
     }
   }
   @media (max-width:765px){
