@@ -44,3 +44,22 @@
     color: #1174BC;
 
 }
+.callback_form button {
+    width: 15%;
+    height: 40px;
+    border: none;
+    background-color: #c75934;
+    color: #fff;
+    border-radius: 5px;
+
+}
+.callback_form button:hover {
+    background-color: #1174BC;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #ffffff;
+    transition: ease all 0.5s;
+
+}

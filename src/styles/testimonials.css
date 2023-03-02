@@ -1,8 +1,11 @@
 
 .testimonial_main {
-    height: auto;
+    height: fit-content;
     width: 100%;
     position: relative;
+}
+.testimonial_main .carousel_main {
+    height: fit-content;
 }
 .testimonial_main img {
     height: 100px;
@@ -13,7 +16,7 @@
     left: 45%;
 }
 .testimonial_second {
-    height:300px;
+    height:250px;
     width: 100%;
     background-color: #EAF6FF;
     margin-top: 4%;
@@ -31,9 +34,10 @@
 .testimonial_second p {
     color: #1e1e1f;
     font-size: 14px;
-    padding-top: 5px;
-    padding-left:20px;
-    padding-right: 20px;
+    padding-top: 10px;
+    padding-left:20%;
+    padding-right: 20%;
+    text-align: center;
 }
 
 

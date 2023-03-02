@@ -1,0 +1,43 @@
+.callback_image {
+    padding-top: 8%;
+}
+.callback_image img {
+    width: 40%;
+    height: 200px;
+    border-radius: 10px;
+}
+.callback_content {
+    text-align: center;
+    margin-top: 3%;
+}
+.index_callback {
+    margin-top: 3%;
+    background: url(../images/callbackbanner.png) no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 1%;
+}
+.index_callback h2 {
+    color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 2%;
+}
+.callback_form {
+    padding-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.callback_form input {
+    width: 40%;
+    height: 40px;
+    border: 1px solid #c75934;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    padding: 10px;
+}
+.callback_form input:focus {
+    outline: none;
+    outline: #c75934;
+    box-shadow: 0 0 10px #719ECE;
+}

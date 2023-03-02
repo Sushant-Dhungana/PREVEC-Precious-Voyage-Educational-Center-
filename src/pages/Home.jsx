@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import CarouselMain from '../components/Carousel'
 import "../styles/home.css"
 import "../styles/navbar.css"
-
 import img2 from "../images/graduate.png";
 import img3 from "../images/banner.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -10,9 +9,11 @@ import StudyAbroad from '../components/StudyAbroad';
 import OurServices from "../components/OurServices";
 import Associations from "../components/Associations";
 import MVG from "../components/MVG";
-
 import axiosBaseURL from "../baseUrl";
 import Testimonials from "../components/Testimonials";
+import NewsEvents from "../components/NewsEvents";
+import { BsFillCalendarCheckFill } from "react-icons/bs";
+import Callback from "../components/Callback";
 
 const Index = () => {
   const [homeData, setHomeData] = useState([]);
@@ -104,14 +105,36 @@ const Index = () => {
           </div>
         </div>
       </section>
+      <section className="index_news">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 news_main">
+              <div className="news_header">
+                < BsFillCalendarCheckFill size={30} style={{ color: "rgb(167 4 4 / 69%)" }} />
+                <h3>News & Events</h3>
+              </div>
+              <div className="after_line_news"></div>
+            </div>
+          </div>
+        </div>
+        <NewsEvents news={homeData.news} />
+      </section>
       <section className="index_testimonials">
         <div className="container">
           <div className="row">
+            <div className="col-md-12 testimonials_head">
+              <h3>What People Says About Us</h3>
+              <div className="after_line_testimonials"></div>
+            </div>
             <div className="col-md-12 about_us">
-              <Testimonials testimonal= {homeData.testimonals}/></div>
+              <Testimonials testimonal={homeData.testimonals} /></div>
           </div>
         </div>
-
+      </section>
+      <section className="index_callback">
+        <div className="container">
+         <Callback />
+        </div>
       </section>
     </div>
   )

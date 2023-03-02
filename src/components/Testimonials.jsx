@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/testimonials.css"
 
 
-const testimonialUrl = process.env.baseUrl || "http://192.168.1.11:8000/images/testimonal/"
+const testimonialUrl = process.env.baseUrl || "http://192.168.1.12:8000/images/testimonal/"
 
 const Testimonials = ({ testimonal }) => {
     const testimonials = testimonal;
@@ -39,12 +39,12 @@ const Testimonials = ({ testimonal }) => {
                     <Slider {...settings}>
                         {
                             testimonials && testimonials.map((item, index) => (
-                                <div className='testimonial_main'>
+                                <div className='testimonial_main' key={index}>
                                     <img src={testimonialUrl+ item.image} alt={item.title} />
                                     <div className="testimonial_second">
                                         <h5>{item.title}</h5>
                                         <h6>{item.role}</h6>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quia atque inventore architecto ex odit doloribus perspiciatis reiciendis dolore voluptatibus facere exercitationem maiores accusamus, officiis nesciunt expedita incidunt iure? Libero!</p>
+                                        <p>{item.description.substring(0, 250)}</p>
                                     </div>
                                 </div>
                             )

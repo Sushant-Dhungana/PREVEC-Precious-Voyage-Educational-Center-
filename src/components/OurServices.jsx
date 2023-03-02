@@ -1,7 +1,7 @@
 import React from 'react'
 import { FcServices } from "react-icons/fc";
 import '../styles/services.css';
-const mvgUrl = process.env.baseUrl || "http://192.168.1.11:8000/images/feature/"
+const mvgUrl = process.env.baseUrl || "http://192.168.1.12:8000/images/feature/"
 
 const OurServices = (props) => {
   const regex = /(<([^>]+)>)/ig;

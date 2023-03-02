@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/carousel.css"
 import NavBar from './NavBar';
 
-const imageUrl = process.env.baseUrl || "http://192.168.1.11:8000/images/slider/"
+const imageUrl = process.env.baseUrl || "http://192.168.1.12:8000/images/slider/"
 
 const CarouselMain = (props) => {
     const slider = props.slider;
