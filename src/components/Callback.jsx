@@ -3,21 +3,28 @@ import "../styles/callback.css"
 import mobile from "../images/mobile.png"
 import axiosBaseURL from "../baseUrl";
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Callback = () => {
 
     const [phone_number, setNumber] = useState("")
+    var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
     var bodyFormData = new FormData();
     bodyFormData.append('phone_number', phone_number);
 
     const handleSubmit = (e) => {
-        axios.post("http://192.168.1.12:8000/api/get-call-back", bodyFormData, { headers: { 'Content-Type': 'multipart/form-data' } })
+        e.preventDefault();
+        if(phone_number.match(phoneno)){
+        axiosBaseURL.post("/api/get-call-back", bodyFormData, { headers: { 'Content-Type': 'multipart/form-data' } })
         .then(console.log)
         .catch(console.error);
-     e.preventDefault();
+        toast.success("We will contact you with in 24 Hours")
+        }else{
+            toast.error("Please Enter Valid Number of 10 digits")
+        }
     }
-    console.log(phone_number)
 
   return (
     <div>
@@ -33,8 +40,9 @@ const Callback = () => {
                         <div className="callback_content">
                             <h2>Get a Callback From Our Experts</h2>
                             <form className='callback_form' onSubmit={handleSubmit}>
-                                <input type="number" placeholder="Enter Your Number" name="phone_number" value={phone_number}  onChange={(e) => setNumber(e.target.value)} required maxLength={10}/>
+                                <input type="number" placeholder="Enter Your Number" name="phone_number" value={phone_number}  onChange={(e) => setNumber(e.target.value)} required maxLength={10}  minLength={10}/>
                                 <button type='submit'>Request</button>
+                                <ToastContainer />
                             </form>
                             </div>
                     </div>
@@ -45,4 +53,4 @@ const Callback = () => {
   )
 }
 
-export default Callback
+export default Callback;

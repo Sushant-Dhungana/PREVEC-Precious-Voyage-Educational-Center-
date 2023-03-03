@@ -6,13 +6,14 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <>
-      {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand, index) => (
-        <div className="navbar_top" key={index}>
-        <Navbar key={expand} expand={expand} className="mb-3">
+      {['xxl'].map((expand) => (
+        
+        <Navbar key={expand} expand={expand} className="mb-3 navbar_top">
           <Container fluid>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -32,8 +33,8 @@ const NavBar = () => {
                     title="Services"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#">Services</NavDropdown.Item>
-                    <NavDropdown.Item href="#">
+                    <NavDropdown.Item>Services</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/services">
                       Another action
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#">
@@ -128,7 +129,7 @@ const NavBar = () => {
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
-        </div>
+      
       ))}
     </>
   );

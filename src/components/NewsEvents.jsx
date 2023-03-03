@@ -1,8 +1,6 @@
 import React from 'react'
 import '../styles/newsevents.css'
-import img1 from '../images/banner.png'
-
-const newsUrl = process.env.baseUrl || "http://192.168.1.12:8000/images/news/"
+const newsUrl = process.env.baseUrl || "http://192.168.1.10:8000/images/news/"
 
 
 const NewsEvents = ({news}) => {

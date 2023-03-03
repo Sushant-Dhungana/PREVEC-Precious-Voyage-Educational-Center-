@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import CarouselMain from '../components/Carousel'
 import "../styles/home.css"
 import "../styles/navbar.css"
-import img2 from "../images/graduate.png";
 import img3 from "../images/banner.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import StudyAbroad from '../components/StudyAbroad';
@@ -14,6 +13,7 @@ import Testimonials from "../components/Testimonials";
 import NewsEvents from "../components/NewsEvents";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 import Callback from "../components/Callback";
+import StudyInIndividual from "../components/StudyInIndividual";
 
 const Index = () => {
   const [homeData, setHomeData] = useState([]);
@@ -31,42 +31,7 @@ const Index = () => {
         <MVG feature={homeData.features} />
       </section>
       <section className="functions">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3 functions_column">
-              <div className="function_section">
-                <div className="circle">
-                  <img src={img2} alt="logo" />
-                </div>
-                <h5>Study In Abroad</h5>
-              </div>
-            </div>
-            <div className="col-md-3 functions_column">
-              <div className="function_section">
-                <div className="circle">
-                  <img src={img2} alt="logo" />
-                </div>
-                <h5>Study In Abroad</h5>
-              </div>
-            </div>
-            <div className="col-md-3 functions_column">
-              <div className="function_section">
-                <div className="circle">
-                  <img src={img2} alt="logo" />
-                </div>
-                <h5>Study In Abroad</h5>
-              </div>
-            </div>
-            <div className="col-md-3 functions_column">
-              <div className="function_section">
-                <div className="circle">
-                  <img src={img2} alt="logo" />
-                </div>
-                <h5>Study In Abroad</h5>
-              </div>
-            </div>
-          </div>
-        </div>
+        <StudyInIndividual abroadindividual = {homeData.abroads}/>
       </section>
       <section className="about_us">
         <div className="container">
@@ -133,7 +98,7 @@ const Index = () => {
       </section>
       <section className="index_callback">
         <div className="container">
-         <Callback />
+         <Callback/>
         </div>
       </section>
     </div>

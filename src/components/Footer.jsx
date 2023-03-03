@@ -61,7 +61,7 @@ const Footer = () => {
             </div>
             <hr className='my_hr'></hr>
             <div className="col-md-6 copy_right">
-              <p><AiOutlineCopyright size={20}/>&nbsp;&nbsp;Copyright 2023, PREVEC All Rights Reserved</p>
+              <p><AiOutlineCopyright size={18}/>&nbsp;&nbsp;Copyright 2023, PREVEC All Rights Reserved</p>
               </div>
               <div className="col-md-6 onviro">
               <p>Developed And Designed By <Link to={'https://onvirotech.com/'} target="_blank">OnviroTech Pvt. Ltd</Link></p>

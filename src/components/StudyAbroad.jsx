@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/studyabroad.css';
 import "../styles/button.css"
-const cardUrl = process.env.baseUrl || "http://192.168.1.12:8000/images/abroad/"
-const circleUrl = process.env.baseUrl || "http://192.168.1.12:8000/images/abroad/banner/"
+const cardUrl = process.env.baseUrl || "http://192.168.1.10:8000/images/abroad/"
+const circleUrl = process.env.baseUrl || "http://192.168.1.10:8000/images/abroad/banner/"
 const StudyAbroad = (props) => {
     const studyabroads = props.studyabroad;
     return (

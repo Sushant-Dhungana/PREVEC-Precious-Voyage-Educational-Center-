@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/testimonials.css"
 
 
-const testimonialUrl = process.env.baseUrl || "http://192.168.1.12:8000/images/testimonal/"
+const testimonialUrl = process.env.baseUrl || "http://192.168.1.10:8000/images/testimonal/"
 
 const Testimonials = ({ testimonal }) => {
     const testimonials = testimonal;
