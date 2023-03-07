@@ -5,12 +5,13 @@
     border-radius: 5px;
     margin-left: 20px;
     color: #fff;  
+    border: 1px solid #c75934;
 }
 .apply_button:hover {
     background-color: #ffffff;
     color: #c75934;
     border: 1px solid #c75934;
-    font-weight: bold;
+    transition: ease all 0.5s;
 }
 .learn_more {
     text-align: center;

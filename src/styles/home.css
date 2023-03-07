@@ -2,6 +2,14 @@
     margin-top: -1%;
     padding: 0;
 } */
+.nav_global {
+    position: absolute;
+    background-color: #fff;
+    z-index: 2;
+    width: 95%;
+    left: 2%;
+    text-align: center;
+}
 .mission {
     background-color: #C75934;
 }

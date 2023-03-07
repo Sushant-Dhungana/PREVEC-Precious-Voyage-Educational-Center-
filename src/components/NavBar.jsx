@@ -1,14 +1,50 @@
 import React from 'react';
 import "../styles/navbar.css";
-import Logo from "../images/logo.png";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import Logo from "../images/logo.png";
 
-const NavBar = () => {
+const NavBar = ({navData}) => {
+  const navbarData = navData?.serviceCategories;
+//   return (
+//     <>
+
+// <Navbar bg="light" expand="lg">
+//       <Container fluid>
+//         <Navbar.Toggle aria-controls="navbarScroll" />
+//         <Navbar.Collapse id="navbarScroll">
+//           <Nav
+//             className="me-auto my-2 my-lg-0"
+//             style={{ maxHeight: '100px' }}
+//             navbarScroll
+//           >
+//             <Nav.Link href="#action1">Home</Nav.Link>
+//             <Nav.Link href="#action2">Link</Nav.Link>
+//             {
+//               navbarData && navbarData?.length > 0 ? (
+//                 <NavDropdown title="Link" id="navbarScrollingDropdown">
+//                 { 
+//                   navbarData?.map((item, index) => (
+//                     <NavDropdown.Item key= {index} as={Link} to={`/services/${item?.slug}`}>{item?.title}</NavDropdown.Item>
+//                   ))
+//                 }
+//               </NavDropdown>
+//               ) : "null"
+//             } 
+
+//             <Nav.Link href="#" >
+//               Link
+//             </Nav.Link>
+//           </Nav>
+//         </Navbar.Collapse>
+//       </Container>
+//     </Navbar>
+//     </>
+//   );
   return (
     <>
       {['xxl'].map((expand) => (
@@ -28,22 +64,18 @@ const NavBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-between flex-grow-1 pe-3">
-                  <Nav.Link href="#">Home</Nav.Link>
-                  <NavDropdown
-                    title="Services"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item>Services</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/services">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                  <Nav.Link as={Link} to={"/"} >Home</Nav.Link>
+                  {
+              navbarData && navbarData?.length > 0 ? (
+                <NavDropdown title="Services"  id={`offcanvasNavbarDropdown-expand-${expand}`}>
+                { 
+                  navbarData?.map((item, index) => (
+                    <NavDropdown.Item key= {index} as={Link} to={`/services/${item?.slug}`}>{item?.title}</NavDropdown.Item>
+                  ))
+                }
+              </NavDropdown>
+              ) : "null"
+            } 
                   <NavDropdown
                     title="Study Abroad"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}

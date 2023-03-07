@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/mvg.css"
-const mvgUrl = process.env.baseUrl || "http://192.168.1.10:8000/images/feature/"
+const mvgUrl = process.env.baseUrl || "http://192.168.1.9:8000/images/feature/"
 const MVG = ({feature}) => {
     const regex = /(<([^>]+)>)/ig;
     const MVGcontent = feature;

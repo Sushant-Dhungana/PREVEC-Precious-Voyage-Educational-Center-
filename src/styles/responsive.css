@@ -274,6 +274,19 @@
     .index_callback img{
         display: none;
     }
+    .services_banner::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 251px;
+        background: rgba(0,0,0,0.5);
+    }
+    .services_banner img{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
 
   }
   @media (max-width:765px){

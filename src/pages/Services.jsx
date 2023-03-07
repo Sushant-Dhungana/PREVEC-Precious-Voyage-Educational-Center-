@@ -1,17 +1,49 @@
 import React from 'react'
-import NavBar from '../components/NavBar';
-import Logo from "../images/banner.png";
+import { useParams } from 'react-router-dom';
 import "../styles/services.css"
-const Services = () => {
-  return (
-    <div className='services_main'>
-             <NavBar />
-       <div className='services_banner'>
-       <img src={Logo} alt="logo" className='logo_top' />
-       </div>
+import axiosBaseURL from '../baseUrl';
+import SpinnerMain from '../components/Spinner';
+import NoDataFound from '../components/NoDataFound';
+const Services = (props) => {
+  const { slug } = useParams();
+  const [serviceData, setServiceData] = React.useState({});
+  const [isLoading, setIsLoading] = React.useState(true);
 
-    </div>
-  )
-}
+  React.useEffect(() => {
+    // const serviceSlug = props?.match?.params?.slug
+    axiosBaseURL.get(`/api/service/${slug}`)
+      .then(res => {
+        setServiceData(res.data);
+        setIsLoading(false);
+      }
+      )
+      .catch(err => console.log(err))
+  }, [props?.match?.params?.slug, slug])
+  // console.log(serviceData);
+
+    return (
+      <>
+      {isLoading ? <SpinnerMain/> : 
+          
+          serviceData.services && serviceData?.services?.length > 0 ? (
+            <div className="services_main">
+              {
+                serviceData?.services?.map((item, index) => (
+                  <div className='services_main' key={index}>
+                    <div className="services_banner">
+                      <img src={"http://192.168.1.9:8000/images/service/" + item?.image} alt={"services"} />
+                      <div className="banner_text">
+                        <h4>{item.title}</h4>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          ) : <NoDataFound/>
+        }
+      </>
+    )
+  }
 
 export default Services
