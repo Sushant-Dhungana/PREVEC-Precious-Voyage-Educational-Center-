@@ -8,9 +8,8 @@ nav.navbar {
     left: 5%;
     background-color: #1174BC !important;
     padding: 10px;
+    z-index: 2;
   }
-
-
   .offcanvas-body{
     background-color: #1174BC;
   }

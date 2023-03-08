@@ -1,5 +1,7 @@
 .carousel_main {
   height:800px;
+  position: relative;
+
 }
 
 .carousel_main img {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import CarouselMain from '../components/Carousel'
 import "../styles/home.css"
 import "../styles/navbar.css"
@@ -8,13 +8,11 @@ import StudyAbroad from '../components/StudyAbroad';
 import OurServices from "../components/OurServices";
 import Associations from "../components/Associations";
 import MVG from "../components/MVG";
-import axiosBaseURL from "../baseUrl";
 import Testimonials from "../components/Testimonials";
 import NewsEvents from "../components/NewsEvents";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 import Callback from "../components/Callback";
 import StudyInIndividual from "../components/StudyInIndividual";
-import NavBar from "../components/NavBar";
 
 const Index = ({homeData}) => {
 

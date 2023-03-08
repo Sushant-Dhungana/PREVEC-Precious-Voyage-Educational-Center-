@@ -4,6 +4,7 @@ import "../styles/services.css"
 import axiosBaseURL from '../baseUrl';
 import SpinnerMain from '../components/Spinner';
 import NoDataFound from '../components/NoDataFound';
+import "../styles/responsive.css"
 const Services = (props) => {
   const { slug } = useParams();
   const [serviceData, setServiceData] = React.useState({});
@@ -19,7 +20,7 @@ const Services = (props) => {
       )
       .catch(err => console.log(err))
   }, [props?.match?.params?.slug, slug])
-  // console.log(serviceData);
+  
 
     return (
       <>
@@ -31,10 +32,10 @@ const Services = (props) => {
                 serviceData?.services?.map((item, index) => (
                   <div className='services_main' key={index}>
                     <div className="services_banner">
-                      <img src={"http://192.168.1.9:8000/images/service/" + item?.image} alt={"services"} />
-                      <div className="banner_text">
-                        <h4>{item.title}</h4>
-                      </div>
+                      <img src={"http://192.168.1.9:8000/images/service/" + item.image} alt={"services"} />
+                      
+                        <h5>{item.title}</h5>
+                      
                     </div>
                   </div>
                 ))

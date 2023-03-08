@@ -8,6 +8,7 @@ import "./styles/button.css"
 import axiosBaseURL from './baseUrl';
 import NavBar from './components/NavBar';
 import SpinnerMain from './components/Spinner';
+import Abroad from './pages/Abroad';
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -34,6 +35,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home homeData = {indexData} />} />
         <Route path="/services/:slug" element={<Services />} />
+        <Route path="/abroad-study/:id" element={<Abroad/>} />
       </Routes>
       <Footer />
       </>
