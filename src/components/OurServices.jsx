@@ -1,7 +1,7 @@
 import React from 'react'
 import { FcServices } from "react-icons/fc";
 import '../styles/indexservices.css';
-const mvgUrl = process.env.baseUrl || "http://192.168.1.9:8000/images/feature/"
+const mvgUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/feature/"
 
 const OurServices = (props) => {
   const services = props.services

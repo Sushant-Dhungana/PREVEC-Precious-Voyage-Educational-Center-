@@ -1,6 +1,6 @@
 import React from 'react'
 
-const abroadUrl = process.env.baseUrl || "http://192.168.1.9:8000/images/abroad/"
+const abroadUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/abroad/"
 
 const StudyInIndividual = ({abroadindividual}) => {
     const abroad = abroadindividual;

@@ -4,7 +4,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import "../styles/associations.css"
 
-const associationsUrl = process.env.baseUrl || "http://192.168.1.9:8000/images/association/"
+const associationsUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/association/"
 
 const Associations = ({association}) => {
     const associations = association;

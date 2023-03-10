@@ -1,0 +1,107 @@
+.apply_col {
+    margin-top: -10%;
+    z-index: 5;
+}
+
+.apply_online_form {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    margin-bottom: 15px;
+
+}
+.icon_apply {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 5;
+    background-color: #C75934;
+    padding: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+.icon_main {
+    height: 38px;
+    width: 38px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 20px;
+}
+.apply_online{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.fields {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.fields label span {
+    color: #f30d0d;
+}
+.fields input {
+    border: 1px solid #c5c1c1;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+.fields  textarea{
+    border: 1px solid #c5c1c1;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+.fields input:focus {
+    border: 1px solid #c56a4c;
+}
+.fields select {
+    border: 1px solid #c5c1c1;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+    width: 100%;
+}
+.fields select:focus {
+    border: 1px solid #c56a4c;
+}
+.fields textarea:focus {
+    border: 1px solid #c56a4c;
+}
+.submit_button_abroad {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+.apply_now_abroad {
+    background-color: #C75934;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    border: 0.5px solid #C75934;
+}
+.apply_now_abroad:hover {
+    border: 0.5px solid #C75934;
+    background-color: #fff;
+    color: #C75934;
+    transition: 0.5s;
+}
+.error {
+    font-size: 12px;
+    color: #f30d0d;
+}

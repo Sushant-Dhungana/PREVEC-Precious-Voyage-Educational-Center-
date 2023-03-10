@@ -112,6 +112,16 @@
         text-align: center;
     }
   }
+  @media (min-width: 1000px){
+    .react-tabs__tab-list {
+        width: 100%;
+        background-color: #1174BC;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: fit-content;
+    }
+  }
   @media (max-width:1200px){
     .above_abroad {
         left: 22%;
@@ -123,7 +133,7 @@
     }
     .apply_button{
         position: absolute;
-      
+        
         z-index: 9999;
         right: 21px;
     }
@@ -187,6 +197,11 @@
     .services_image img {
         object-fit: contain;
     }
+    .information {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 
     
   }
@@ -306,6 +321,16 @@
 .abroads_banner h5{
     left: 30% !important;
    
+}
+.information {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr ;
+}
+.about_us_banner img{
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+
 }
 
   }

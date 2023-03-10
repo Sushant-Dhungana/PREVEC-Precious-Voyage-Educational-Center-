@@ -9,6 +9,8 @@ import axiosBaseURL from './baseUrl';
 import NavBar from './components/NavBar';
 import SpinnerMain from './components/Spinner';
 import Abroad from './pages/Abroad';
+import AboutUs from './pages/AboutUs';
+import"./app.css"
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -23,7 +25,7 @@ const App = () => {
   // const studyAbroad = homeData.abroads;
 
   return (
-    <div>
+    <div className='body'>
     {
       loading? <SpinnerMain/> :
     
@@ -36,6 +38,7 @@ const App = () => {
         <Route path="/" element={<Home homeData = {indexData} />} />
         <Route path="/services/:slug" element={<Services />} />
         <Route path="/abroad-study/:id" element={<Abroad/>} />
+        <Route path="/aboutus" element={<AboutUs/>} />
       </Routes>
       <Footer />
       </>

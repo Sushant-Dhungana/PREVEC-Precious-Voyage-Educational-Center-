@@ -42,32 +42,78 @@
 .overview_abroad p {
     padding-left: 10px;
 }
-.apply_col {
-    margin-top: -10%;
-    z-index: 5;
+.basic {
+    padding-top: 1%;
+    background-color: #F6FBFF;
 }
-.apply_online_form {
-    background-color: #C75934;
-    padding: 8px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    color: #fff;
-    font-weight: 600;
-    font-size: 20px;
-    text-align: center;
-}
-.icon_apply {
+.basic_info_main {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    z-index: 5;
+    padding: 10px;
+    color: #C75934;
+}
+.information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 10px;
+}
+.information_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.information_main h5{
+    text-align: center;
+}
+.tabs_main {
+    margin-top: 2%;
+}
+.react-tabs__tab-list {
+    width: 100%;
+    background-color: #1174BC;
+}
 
+.react-tabs__tab {
+    margin-top: -1px;
+    padding: 15px !important;
+    color: #fff;
+    text-align: center;
+    border: none !important;
 }
-.icon_main {
-    height: 38px;
-    width: 38px;
-    background-color: #ffffff;
-    border-radius: 50%;
+.react-tabs__tab--selected {
+    background-color: #C75934 !important;
+    border: none !important;
+    color: #fff !important;
+    border-radius: 0px !important;
+    height: 54px;
 }
+.tabs_main p {
+    padding: 10px;
+}
+.description_main {
+    margin-top: 2%;
+    text-align: justify;
+}
+.universities_main {
+    margin-top: 2% !important;
+    background: #fff;
+    margin-bottom: 20px;
+}
+.university_head {
+    text-align: center;
+}
+.university_head h4 {
+    color: #1174BC;
+}
+.after_line_university {
+    width:28%;
+    border-bottom: 2px solid #C75934;
+    margin:0 auto;
+}
+

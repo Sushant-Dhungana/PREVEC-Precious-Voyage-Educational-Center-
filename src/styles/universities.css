@@ -1,0 +1,10 @@
+.universitiess_main {
+    padding-top: 10%;
+}
+  .universitiess_main img {
+    width: 150px !important;
+    height:150px !important;
+    object-fit: cover;
+    margin: 0 auto;
+
+  }

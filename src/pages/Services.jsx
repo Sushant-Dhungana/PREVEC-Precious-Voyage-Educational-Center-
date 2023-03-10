@@ -11,7 +11,6 @@ const Services = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    // const serviceSlug = props?.match?.params?.slug
     axiosBaseURL.get(`/api/service/${slug}`)
       .then(res => {
         setServiceData(res.data);
@@ -32,7 +31,7 @@ const Services = (props) => {
                 serviceData?.services?.map((item, index) => (
                   <div className='services_main' key={index}>
                     <div className="services_banner">
-                      <img src={"http://192.168.1.9:8000/images/service/" + item.image} alt={"services"} />
+                      <img src={"http://precious-voyage.onvirotech.com/images/service/" + item.image} alt={"services"} />
                       
                         <h5>{item.title}</h5>
                       

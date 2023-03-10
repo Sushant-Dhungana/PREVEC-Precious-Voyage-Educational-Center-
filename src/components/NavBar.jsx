@@ -97,7 +97,7 @@ const NavBar = ({ navData }) => {
                     title="About"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#">About</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to={"/aboutus"}>About</NavDropdown.Item>
                     <NavDropdown.Item href="#">
                       Another action
                     </NavDropdown.Item>

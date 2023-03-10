@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import "../styles/callback.css"
 import mobile from "../images/mobile.png"
 import axiosBaseURL from "../baseUrl";
-import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,6 +20,7 @@ const Callback = () => {
         .then(console.log)
         .catch(console.error);
         toast.success("We will contact you with in 24 Hours")
+        setNumber("")
         }else{
             toast.error("Please Enter Valid Number of 10 digits")
         }
