@@ -11,6 +11,7 @@ import Logo from "../images/logo.png";
 const NavBar = ({ navData }) => {
   const navbarData = navData?.serviceCategories;
   const abroadData = navData?.abroads;
+  const preparationData = navData?.preparation;
   //   return (
   //     <>
 
@@ -79,51 +80,49 @@ const NavBar = ({ navData }) => {
                   }
                   {
                     abroadData && abroadData?.length > 0 ? (
-                  <NavDropdown
-                    title="Study Abroad"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    {
-                         abroadData?.map((eq, index)=> (
-                          <NavDropdown.Item key={index} as={Link} to={`/abroad-study/${eq?.id}`}>{eq?.title}</NavDropdown.Item>
-                        )) 
-                    }
-                     </NavDropdown>
+                      <NavDropdown
+                        title="Study Abroad"
+                        id={`offcanvasNavbarDropdown-expand-${expand}`}
+                      >
+                        {
+                          abroadData?.map((eq, index) => (
+                            <NavDropdown.Item key={index} as={Link} to={`/abroad-study/${eq?.id}`}>{eq?.title}</NavDropdown.Item>
+                          ))
+                        }
+                      </NavDropdown>
                     ) : "null"
-            }
-                   
-                 
+                  }
+
+
                   <NavDropdown
                     title="About"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                     <NavDropdown.Item as={Link} to={"/aboutus"}>About</NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
+                    <NavDropdown.Item as={Link} to={"/messagefromceo"}>
+                      Message From CEO
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <NavDropdown
-                    title="Preparation"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#">Preparation</NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-               
+
+                  {
+                    preparationData && preparationData?.length > 0 ? (
+                      <NavDropdown
+                        title="Preparation"
+                        id={`offcanvasNavbarDropdown-expand-${expand}`}
+                      >
+                        {
+                          preparationData?.map((item, index) => (
+                            <div className='dropdown-item' key={index}>
+                            <NavDropdown.Item as={Link} to={`/preparation/${item?.slug}`}>{item?.slug}</NavDropdown.Item>
+                            </div>
+                    ))
+                    }
+                    </NavDropdown>
+
+                  ) : "null"
+}
+
+
                   <NavDropdown
                     title="Courses"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}

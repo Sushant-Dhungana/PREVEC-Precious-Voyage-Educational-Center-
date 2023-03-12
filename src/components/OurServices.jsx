@@ -1,5 +1,5 @@
 import React from 'react'
-import { FcServices } from "react-icons/fc";
+
 import '../styles/indexservices.css';
 const mvgUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/feature/"
 
@@ -10,14 +10,7 @@ const OurServices = (props) => {
     <div>
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
-            <div className="services_head">
-              <FcServices size={50} />
-              <h3>Our Services</h3>
-            </div>
-            <div className="after_line_services"></div>
-            <h5 className="services_motto">We Provide Better and Lifting Up Opportunities</h5>
-          </div>
+          
           {
             services && services.map((item, index) => {
               if (index % 2 === 0) {

@@ -10,6 +10,8 @@ import NavBar from './components/NavBar';
 import SpinnerMain from './components/Spinner';
 import Abroad from './pages/Abroad';
 import AboutUs from './pages/AboutUs';
+import MessageCEO from './pages/MessageCEO';
+import Preparation from './pages/Preparation';
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -38,6 +40,8 @@ const App = () => {
         <Route path="/services/:slug" element={<Services />} />
         <Route path="/abroad-study/:id" element={<Abroad/>} />
         <Route path="/aboutus" element={<AboutUs/>} />
+        <Route path='/messagefromceo' element={<MessageCEO/>} />
+        <Route path="/preparation/:slug" element={<Preparation/>} />
       </Routes>
       <Footer />
       </>

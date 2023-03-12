@@ -25,19 +25,7 @@
     flex-direction: row;
     margin-top: 3%;
 }
-.services_content {
-    margin-top: 3%;
-}
-.services_content h4 {
-    color: #1174BC;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-.services_content p {
-    color: #585756;
-    text-align: justify;
-    padding: 5px;
-}
+
 .services_image {
     margin-top: 3%;
     text-align: center;

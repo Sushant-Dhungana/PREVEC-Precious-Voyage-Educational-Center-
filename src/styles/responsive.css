@@ -66,6 +66,10 @@
         flex-direction: column;
         margin-top: 3%;
     }
+    .services_content {
+        text-align: center;
+        margin-top: 1%;
+    }
     .services_image {
         display: flex;
         align-items: center;
@@ -110,6 +114,26 @@
     }
     .onviro {
         text-align: center;
+    }
+    .about_details p img {
+        width: 100% !important;
+    }
+    .about_details p{
+        display: grid!important;
+        flex-direction: column !important;
+        text-align: justify;
+    }
+    .about_us_banner img{
+        background-size: cover;
+        height: 210px !important;
+        width: 100%;
+    }
+    .banner::after{
+        height: 211px !important;
+    }
+    .message_banner img{
+        height: 210px;
+        width: 100% !important;
     }
   }
   @media (min-width: 1000px){
@@ -200,6 +224,9 @@
     .information {
         display: grid !important;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .why_individual {
+        width: 100% !important;
     }
 
 
@@ -331,6 +358,12 @@
     height: 250px;
     width: 100%;
 
+}
+.after_line_why {
+    width: 30% !important;
+}
+.after_line_teams {
+    width: 25% !important;
 }
 
   }

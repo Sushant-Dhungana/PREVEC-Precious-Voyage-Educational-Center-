@@ -13,6 +13,7 @@ import NewsEvents from "../components/NewsEvents";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 import Callback from "../components/Callback";
 import StudyInIndividual from "../components/StudyInIndividual";
+import { FcServices } from "react-icons/fc";
 
 const Index = ({homeData}) => {
 
@@ -51,7 +52,21 @@ const Index = ({homeData}) => {
           <StudyAbroad studyabroad={homeData.abroads} />
         </section>
         <section className="index_services">
+          <div className="container">
+            <div className="row">
+
+ 
+        <div className="col-md-12">
+            <div className="services_head">
+              <FcServices size={50} />
+              <h3>Our Services</h3>
+            </div>
+            <div className="after_line_services"></div>
+            <h5 className="services_motto">We Provide Better and Lifting Up Opportunities</h5>
+          </div>
           <OurServices services={homeData.features} />
+          </div>
+          </div>
         </section>
         <section className="index_associations">
           <div className="container">

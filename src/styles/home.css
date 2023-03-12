@@ -2,6 +2,11 @@
     margin-top: -1%;
     padding: 0;
 } */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,300;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,500;1,700&display=swap');
+ *{
+    font-family: 'Nunito Sans', sans-serif;
+  }
 .nav_global {
     position: absolute;
     background-color: #fff;
@@ -113,6 +118,19 @@
 .index_services {
     margin-top: 3%;
 }
+.services_content {
+    padding-left: 10px;
+}
+.services_content h4 {
+    color: #1174BC;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.services_content p {
+    color: #585756;
+    text-align: justify;
+    padding: 5px;
+}
 
 .index_associations {
     margin-top: 3%;
@@ -171,5 +189,10 @@
     background-color: #c75934;
     margin-bottom:2% !important;
     margin-left: 44%;
+}
+.news_main h6 {
+    text-align: center;
+    color: #585756;
+    font-weight: 600;
 }
 

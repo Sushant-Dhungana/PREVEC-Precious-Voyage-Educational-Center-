@@ -1,0 +1,51 @@
+.message_banner {
+    position: relative;
+}
+.message_banner img{
+    height: 410px;
+    width: 100% !important;
+}
+.message_banner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.message_banner h4 {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    color: #fff;
+    z-index: 4;
+}
+
+.message_content_head {
+    text-align: center;
+    margin-top: 3%;
+}
+.message_content_head img {
+    width: 150px;
+    height: 150px;
+}
+.message_content_head h5 {
+    padding-top: 2px;
+    font-weight: 600;
+}
+.message_content_head p {
+    padding: 0;
+    color: #1174BC;
+}
+.social_media_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+.message_paragraph p{
+    margin-top: 2%;
+    padding: 5px;
+}

@@ -1,21 +1,23 @@
-.about_us_banner img{
+.about_us_banner img {
     background-size: cover;
     height: 410px;
     width: 100%;
-
 }
+
 .banner {
     position: relative;
     width: 100%;
 }
-.banner::after{
+
+.banner::after {
     content: "";
     position: absolute;
     left: 0;
     width: 100%;
     height: 411px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
+
 .banner h4 {
     position: absolute;
     top: 50%;
@@ -23,8 +25,129 @@
     color: #fff;
     z-index: 4;
 }
-.about-content img {
+
+.about {
+    margin-top: 3% !important;
+}
+
+.about_content img {
+    width: 50% !important;
+    height: 200px !important;
+}
+
+.about_content p {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.why {
+    margin-top: 3% !important;
+    background-color: #F6FBFF;
+    padding-bottom: 5px;
+}
+
+.why_head {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.why_head {
+    color: rgb(70, 69, 69);
+}
+
+.why_head span {
+    color: #1174BC;
+}
+
+.after_line_why {
+    width: 13%;
+    height: 3px;
+    background-color: #c75934;
+    margin-bottom: 2% !important;
+    margin: 0 auto
+}
+
+.why_content {
+    margin-top: 2%;
+}
+
+.why_individual {
+    margin: 0 auto;
+    width: 70% !important;
+    border: 0.1px solid #e2e2e2;
+    border-radius: 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.why_icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #c75934;
+    color: #fff;
+    text-align: center;
+    padding-top: 11px;
+    margin: 0 auto;
+}
+
+.why_content {
+    text-align: center;
+}
+
+.why_content h5 {
+    color: #1174BC;
+}
+
+.why_content p {
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.our_teams {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.our_teams {
+    text-align: center;
+}
+.our_teams h4 {
+    color: rgb(107, 106, 106);
+}
+.our_teams span {
+    color: #1174BC;
+}
+.after_line_teams {
+    width: 8%;
+    height: 3px;
+    background-color: #c75934;
+    margin-bottom: 2% !important;
+    margin: 0 auto
+}
+
+.our_team_card {
+    margin-top: 2%;
+    border: 0.2px solid #e2e2e2;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 6px;
+    text-align: center;
+    border: 0.1px solid #e2e2e2;
+ 
+}
+
+.our_team_card img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 130px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.our_team_card h5{
+    padding-top: 2%;
+    color: #1174BC;
+}
+.our_team_card p {
+    color: dimgray;
 }
