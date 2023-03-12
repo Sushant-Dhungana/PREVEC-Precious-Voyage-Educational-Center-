@@ -123,21 +123,20 @@
         flex-direction: column !important;
         text-align: justify;
     }
-    .about_us_banner img{
+    .banner_main img{
         background-size: cover;
         height: 210px !important;
         width: 100%;
     }
     .banner::after{
-        height: 211px !important;
+        height: 100% !important;
     }
     .message_banner img{
         height: 210px;
         width: 100% !important;
     }
-    .preparation_banner img {
-        height: 210px !important;
-        width: 100%;
+    .apply_preparation {
+        margin-top: 3% !important;
     }
   }
   @media (min-width: 1000px){

@@ -5,6 +5,8 @@ import axiosBaseURL from '../baseUrl';
 import SpinnerMain from '../components/Spinner';
 import NoDataFound from '../components/NoDataFound';
 import "../styles/responsive.css"
+import "../styles/banner.css"
+
 const Services = (props) => {
   const { slug } = useParams();
   const [serviceData, setServiceData] = React.useState({});
@@ -29,11 +31,10 @@ const Services = (props) => {
             <div className="services_main">
               {
                 serviceData?.services?.map((item, index) => (
-                  <div className='services_main' key={index}>
-                    <div className="services_banner">
+                  <div className='banner_main' key={index}>
+                    <div className="banner">
                       <img src={"http://precious-voyage.onvirotech.com/images/service/" + item.image} alt={"services"} />
-                      
-                        <h5>{item.title}</h5>
+                        <h4>{item.title}</h4>
                       
                     </div>
                   </div>

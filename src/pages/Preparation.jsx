@@ -4,6 +4,7 @@ import banner from '../images/banner.png'
 import '../styles/preparation.css'
 import axiosBaseURL from '../baseUrl'
 import ApplyPreparation from '../components/ApplyPreparation'
+import "../styles/banner.css"
 
 const Preparation = ({ props }) => {
     const [preparationData, setPreparationData] = React.useState({})
@@ -19,12 +20,13 @@ const Preparation = ({ props }) => {
             })
     }, [props?.match?.params?.slug, slug]);
     const id = preparationData?.preparation?.id;
-    console.log(id);
     return (
         <div className='preparation_main'>
-            <div className="preparation_banner">
+            <div className="banner_main">
+            <div className="banner">
                 <img src={banner} alt="preparation banner" className='banner_image' />
                 <h4>Preparation</h4>
+            </div>
             </div>
             <div className="container">
                 <div className="row">

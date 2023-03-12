@@ -6,6 +6,7 @@ import banner from "../images/banner.png"
 import DOMPurify from 'dompurify';
 import { MdMiscellaneousServices } from "react-icons/md";
 import OurServices from '../components/OurServices'
+import "../styles/banner.css"
 
 const AboutUs = () => {
   const [aboutUsData, setAboutUsData] = React.useState({})
@@ -24,7 +25,7 @@ const AboutUs = () => {
 
   return (
     <div className="about_us_main">
-      <div className="about_us_banner">
+      <div className="banner_main">
         <div className="banner">
           <img src={banner} alt="about banner" className='banner_image' />
           <h4>About Us</h4>

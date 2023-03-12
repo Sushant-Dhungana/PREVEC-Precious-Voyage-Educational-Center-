@@ -62,7 +62,7 @@ const ApplyNow = (props) => {
                                 <div className="icon_main">
                                     <FiMail style={{ color: "black" }} />
                                 </div>
-                                <h4>apply online</h4>
+                                <h4>Apply online</h4>
                             </div>
                             <form className='apply_online' onSubmit={handleSubmit} >
                                 <div className="fields">

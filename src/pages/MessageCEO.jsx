@@ -6,7 +6,7 @@ import { AiFillFacebook, AiOutlineTwitter, AiFillLinkedin, AiOutlineWhatsApp } f
 import {BsFillCalendarCheckFill} from 'react-icons/bs';
 import axiosBaseURL from '../baseUrl';
 import NewsEvents from '../components/NewsEvents';
-
+import "../styles/banner.css"
 
 const MessageCEO = () => {
     const [messageData, setMessageData] = React.useState({})
@@ -18,7 +18,7 @@ const MessageCEO = () => {
     console.log(messageData);
     return (
         <div className='messageceo_main'>
-            <div className="message_banner">
+            <div className="banner">
                 <img src={banner} alt="message banner" className='banner_image' />
                 <h4>Message from CEO</h4>
             </div>

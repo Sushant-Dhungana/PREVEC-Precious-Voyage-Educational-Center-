@@ -1,8 +1,9 @@
 import React, {useEffect} from 'react'
 import { FiMail } from "react-icons/fi"
+import { toast, ToastContainer } from 'react-toastify';
 import axiosBaseURL from '../baseUrl';
 
-const ApplyPreparation = ({props}) => {
+const ApplyPreparation = ({id}) => {
     const initialState = {
         fullname: '',
         email: '',
@@ -10,14 +11,39 @@ const ApplyPreparation = ({props}) => {
         phone: '',
         country: '',
     }
-    const id = props?.id;
-    console.log(id);
-    const [applyPreperation, setApplyPreperation] = React.useState(initialState);
+    const [error, setError] = React.useState(false);
+    const [applyPreparation, setApplyPreperation] = React.useState(initialState);
+    const { fullname, email, address, phone, country } = applyPreparation;
+    const handleChange = (e) => {
+        setApplyPreperation({
+            ...applyPreparation,
+            [e.target.name]: e.target.value
+        });
+    }
 
-     useEffect(() => {
-       axiosBaseURL.post((`/api/preparation/${props?.id}`), applyPreperation)
+    var bodyFormData = new FormData();
+    Object.entries(applyPreparation).forEach(([key, value]) => {
+        bodyFormData.append(key, value);
+    });
+ 
 
-    }, [applyPreperation])
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axiosBaseURL.post(`/api/preparation/${id}`, bodyFormData, { headers: { 'Content-Type': 'application/json' } })
+            .then(
+                (res) => {
+                    toast.success("Applied Successfully")
+                    console.log(res)
+                    setApplyPreperation(initialState)
+                    setError(" ")
+                }
+            )
+            .catch((res) => {
+                console.log(res)
+                setError(res?.response?.data?.errors)
+                toast.error("Please Fill All Fields")
+            });
+    }
     return (
         <div className='apply_preprn_main'>
             <div className="container">
@@ -30,31 +56,37 @@ const ApplyPreparation = ({props}) => {
                                 </div>
                                 <h4>Apply online</h4>
                             </div>
-                            <form className='apply_online'>
+                            <form className='apply_online' onSubmit={handleSubmit}>
                                 <div className="fields">
                                     <label htmlFor="fullname">Name<span>*</span></label>
-                                    <input type="text" name='fullname' />
+                                    <input type="text" name='fullname' required value={fullname} onChange={handleChange} />
+                                    {error?.fullname && <p className="error">{error.fullname}</p>}
                                 </div>
                                 <div className="fields">
                                     <label htmlFor="email">Email<span>*</span></label>
-                                    <input type="email" name='Email' />
+                                    <input type="email" name='email' required value={email} onChange={handleChange}/>
+                                    {error?.email && <p className="error">{error.email}</p>}
                                 </div>
                                 <div className="fields">
-                                    <label htmlFor="address">Name</label>
-                                    <input type="text" name='Address' />
+                                    <label htmlFor="address">Address</label>
+                                    <input type="text" name='address' value={address} onChange={handleChange} />
+                                    {error?.address && <p className="error">{error.address}</p>}
                                 </div>
                                 <div className="fields">
                                     <label htmlFor="address">Phone <span>*</span></label>
-                                    <input type="tel" name='Address' />
+                                    <input type="tel" name='phone' required value={phone} onChange={handleChange} />
+                                    {error?.phone && <p className="error">{error.phone}</p>}
                                 </div>
                                 <div className="fields">
                                     <label htmlFor="country">Country</label>
-                                    <input type="text" name='country' />
+                                    <input type="text" name='country' value={country} onChange={handleChange} />
+                                    {error?.country && <p className="error">{error.country}</p>}
                                 </div>
                                 <div className="submit_button_abroad">
                                     <button type='submit' className='apply_now_abroad'>Submit</button>
                                 </div>
                             </form>
+                            <ToastContainer />
                         </div>
                     </div>
                 </div>
