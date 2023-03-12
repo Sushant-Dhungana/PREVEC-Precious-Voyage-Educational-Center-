@@ -135,6 +135,10 @@
         height: 210px;
         width: 100% !important;
     }
+    .preparation_banner img {
+        height: 210px !important;
+        width: 100%;
+    }
   }
   @media (min-width: 1000px){
     .react-tabs__tab-list {

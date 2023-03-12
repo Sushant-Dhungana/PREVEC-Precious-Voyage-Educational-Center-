@@ -5,8 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/universities.css";
 
 const Universities = (data) => {
-    const  universities =data 
-    console.log(universities);
+    const  universities =data ;
     var settings= {
         dots: false,
         infinite: false,
