@@ -10,7 +10,6 @@ import NavBar from './components/NavBar';
 import SpinnerMain from './components/Spinner';
 import Abroad from './pages/Abroad';
 import AboutUs from './pages/AboutUs';
-import"./app.css"
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
