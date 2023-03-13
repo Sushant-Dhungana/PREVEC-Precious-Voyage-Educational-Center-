@@ -57,7 +57,7 @@ const MessageCEO = () => {
               </div>
             </div>
           </div>
-                <NewsEvents news={messageData?.news}/>
+                <NewsEvents news={messageData?.news?.slice(0,4)}/>
             </section>
         </div>
     )

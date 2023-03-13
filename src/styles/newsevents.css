@@ -47,9 +47,13 @@
     border-top: 32px solid #c75934;
     transform: rotate(271deg);
 }
+.news_card a{
+    text-decoration: none;
+}
 .news_card h6 {
     color: #585756;
-    font-size: 16px;
     padding: 10px;
     padding-left: 20px;
+    font-weight: 600;
+    width: 100%;
 }

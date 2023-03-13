@@ -91,7 +91,7 @@ const Index = ({homeData}) => {
               </div>
             </div>
           </div>
-          <NewsEvents news={homeData.news} />
+          <NewsEvents news={homeData.news.slice(0,4)} />
         </section>
         <section className="index_testimonials">
           <div className="container">
