@@ -64,3 +64,21 @@
     transition: ease all 0.5s;
 
 }
+.enroll_button {
+    text-align: center;
+    padding-bottom: 10%;
+}
+.enroll_button button{
+    background-color: #C75934;
+    border: none;
+    padding: 3px 10px;
+    color: #fff;
+    transition: ease all 0.5s;
+    margin-top: 4%;
+}
+
+.enroll_button button:hover {
+    background-color: #ffffff;
+    background-color: #1174BC;
+    transition: ease all 0.5s;
+}

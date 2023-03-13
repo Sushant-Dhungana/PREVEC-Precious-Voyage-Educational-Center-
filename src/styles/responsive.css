@@ -1,3 +1,11 @@
+@media (max-width:1300px){
+    .course_logo {
+        position: relative;
+        margin-top: -20%;
+        margin-left: 25% !important;
+    
+    }
+}
 @media (max-width:1000px){
     .nav_global {
         width: 100%;
@@ -138,6 +146,23 @@
     .apply_preparation {
         margin-top: 3% !important;
     }
+    .course_logo {
+        height: 70px !important;
+        width: 70px !important;
+        margin-top: -25% !important;
+        margin-left: 25% !important;
+    
+    }
+    .course_logo img {
+        height: 90%;
+        width: 90%;
+        border-radius: 50%;
+        margin-left: 4px !important;
+        margin-top: 3px !important;
+    }
+    .after_line_courses {
+        width: 48% !important;
+    }
   }
   @media (min-width: 1000px){
     .react-tabs__tab-list {
@@ -216,7 +241,6 @@
         top: 6%;
         left: 6.5%;
         display: block;
-        
     }
     .card_main h6 {
         margin-top: 15%;
@@ -230,6 +254,12 @@
     }
     .why_individual {
         width: 100% !important;
+    }
+    .course_logo {
+        position: relative;
+        margin-top: -25% !important;
+        margin-left: 20% !important;
+    
     }
 
 
@@ -367,6 +397,12 @@
 }
 .after_line_teams {
     width: 25% !important;
+}
+.course_logo {
+    position: relative;
+    margin-top: -10% !important;
+    margin-left: 38% !important;
+
 }
 
   }

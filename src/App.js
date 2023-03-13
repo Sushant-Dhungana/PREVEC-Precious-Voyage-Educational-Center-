@@ -12,6 +12,8 @@ import Abroad from './pages/Abroad';
 import AboutUs from './pages/AboutUs';
 import MessageCEO from './pages/MessageCEO';
 import Preparation from './pages/Preparation';
+import Courses from './pages/Courses';
+import Information from './pages/Information';
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -42,6 +44,8 @@ const App = () => {
         <Route path="/aboutus" element={<AboutUs/>} />
         <Route path='/messagefromceo' element={<MessageCEO/>} />
         <Route path="/preparation/:slug" element={<Preparation/>} />
+        <Route path="/courses" element={<Courses/>} />
+        <Route path="/information" element ={<Information/>}/>
       </Routes>
       <Footer />
       </>

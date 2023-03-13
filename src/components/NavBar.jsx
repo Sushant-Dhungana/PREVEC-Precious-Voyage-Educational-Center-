@@ -12,6 +12,7 @@ const NavBar = ({ navData }) => {
   const navbarData = navData?.serviceCategories;
   const abroadData = navData?.abroads;
   const preparationData = navData?.preparation;
+
   //   return (
   //     <>
 
@@ -113,51 +114,20 @@ const NavBar = ({ navData }) => {
                         {
                           preparationData?.map((item, index) => (
                             <div className='dropdown-item' key={index}>
-                            <NavDropdown.Item as={Link} to={`/preparation/${item?.slug}`}>{item?.slug}</NavDropdown.Item>
+                              <NavDropdown.Item as={Link} to={`/preparation/${item?.slug}`}>{item?.slug}</NavDropdown.Item>
                             </div>
-                    ))
-                    }
-                    </NavDropdown>
+                          ))
+                        }
+                      </NavDropdown>
 
-                  ) : "null"
-}
+                    ) : "null"
+                  }
 
-
-                  <NavDropdown
-                    title="Courses"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#">Courses</NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <Nav.Link href="#">Gallery</Nav.Link>
-                  <NavDropdown
-                    title="Career"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    <NavDropdown.Item href="#">Career</NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#">
-                      Something else here
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  <Nav.Link href="#asas">Information</Nav.Link>
-                  <Nav.Link href="#asa">Contact Us</Nav.Link>
+                  <Nav.Link as={Link} to={"/courses"}>Courses</Nav.Link>
+                  <Nav.Link as={Link} to={""}>Gallery</Nav.Link>
+                  <Nav.Link as={Link} to={"/information"}>Information</Nav.Link>
+                  <Nav.Link as={Link} to={""}>Contact Us</Nav.Link>
                 </Nav>
-
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

@@ -19,7 +19,7 @@ const MVG = ({feature}) => {
                       </div>
                       <div className="col-md-9 mvg_main">
                         <h5>{item.title}</h5>
-                        <p>{item.description.replace(regex, '').substring(0, 200)}</p>
+                        <p>{item.description.replace(regex, '').substring(0, 180)}</p>
                       </div>
                     </div>
                   </div>

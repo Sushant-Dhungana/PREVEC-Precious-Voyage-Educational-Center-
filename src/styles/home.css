@@ -23,9 +23,7 @@
     background-color: #C75934;
 }
 .main_logo {
-    display: flex;
-    justify-content:flex-end;
-    align-items: center;
+   margin-top:3%;
 }
 .mvg_main {
     padding-top: 3%;

@@ -14,7 +14,11 @@ const Associations = ({association}) => {
         nav: true,
         autoplay: true,
         // navText: ["Prev", "Next"],
-        smartSpeed: 1000,
+      
+        autoplayHoverPause: true,
+        slideTransition: 'linear',
+        autoplaySpeed: 30000,
+        autoplayTimeout: 5000,
         loop: true,
         responsive: {
             0: {
