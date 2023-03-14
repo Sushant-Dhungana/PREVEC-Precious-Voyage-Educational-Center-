@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import bannerAppointment from '../images/banner.png'
 import '../styles/bookappointment.css'
 import axiosBaseURL from '../baseUrl'
