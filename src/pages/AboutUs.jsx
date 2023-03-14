@@ -3,7 +3,6 @@ import axiosBaseURL from '../baseUrl'
 import "../styles/aboutus.css"
 import "../styles/responsive.css"
 import banner from "../images/banner.png"
-import DOMPurify from 'dompurify';
 import { MdMiscellaneousServices } from "react-icons/md";
 import OurServices from '../components/OurServices'
 import "../styles/banner.css"
@@ -34,7 +33,7 @@ const AboutUs = () => {
       <div className="container about">
         <div className="row">
           <div className="col-md-12 about_content">
-            <div className='about_details' dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(aboutUsData?.aboutUs?.description) }} ></div>
+            <div className='about_details' dangerouslySetInnerHTML={{ __html: aboutUsData?.aboutUs?.description }} ></div>
           </div>
         </div>
       </div>

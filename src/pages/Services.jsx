@@ -1,6 +1,5 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import "../styles/services.css"
 import axiosBaseURL from '../baseUrl';
 import SpinnerMain from '../components/Spinner';
 import NoDataFound from '../components/NoDataFound';
