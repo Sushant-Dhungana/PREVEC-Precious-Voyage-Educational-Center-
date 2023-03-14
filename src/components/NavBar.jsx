@@ -126,7 +126,7 @@ const NavBar = ({ navData }) => {
                   <Nav.Link as={Link} to={"/courses"}>Courses</Nav.Link>
                   <Nav.Link as={Link} to={""}>Gallery</Nav.Link>
                   <Nav.Link as={Link} to={"/information"}>Information</Nav.Link>
-                  <Nav.Link as={Link} to={""}>Contact Us</Nav.Link>
+                  <Nav.Link as={Link} to={"/contactus"}>Contact Us</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

@@ -1,0 +1,33 @@
+.address_col {
+    margin-top: 2%;
+}
+.contact_address {
+    margin: 0 auto;
+    border: 0.2px solid #cfcfcf;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 6px;
+}
+.contact_address h4 {
+    font-weight: 600;
+    color: #1174BC;
+}
+.individual_details h4 {
+    font-weight: 600;
+    color: #1174BC;
+}
+.contact_individuals_main {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+.contact_individuals {
+    display: flex;
+    gap: 10px;
+}
+.map_contact {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

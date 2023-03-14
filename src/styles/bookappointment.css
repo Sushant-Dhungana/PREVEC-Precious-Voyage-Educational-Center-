@@ -1,0 +1,93 @@
+.appointment_content {
+    padding-top: 10px;
+   text-align: center;
+}
+.appointment_content h4 {
+    font-weight: 600;
+    color: #1174BC;
+}
+.appointment_content h4 span {
+    font-weight: 600;
+    color: #C75934;
+    margin-top: 10px;
+    text-align: center;
+}
+.after_line_appointment {
+    width: 38%;
+    height: 3px;
+    background-color: #C75934;
+    margin: 0 auto;
+}
+.appointment_content p {
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(107, 106, 106);
+}
+.form_cols .book_appointment_form {
+    margin-top: 10px;
+    width: 80%;
+    padding-left: 3%;
+    margin: 0 auto;
+}
+.book_fields {
+    margin-top: 10px;
+}
+.form_cols .book_fields {
+    display: flex;
+    flex-direction: column;
+}
+.book_fields label span{
+    font-weight: 600;
+    color: #c51717;
+}
+.form_cols .book_fields input {
+
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #7a7b7b7a !important;
+    border-radius: 6px;
+    outline: none;
+}
+.form_cols .book_fields input:focus {
+    border: 1px solid #cf6c4b;
+}
+.book_fields textarea {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #7a7b7b7a !important;
+    border-radius: 6px;
+    outline: none;
+}
+.book_fields textarea:focus {
+    border: 1px solid #cf6c4b;
+}
+.contact {
+    margin-top: 2%;
+}
+.contact_details {
+
+    width: 80%;
+    margin: 0 auto;
+    border: 0.2px solid #cfcfcf;
+    padding: 15px;
+    border-radius: 6px;
+}
+.contact_head {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+.contact_head h5 {
+    margin: 0;
+    color: #1174BC;
+    font-weight: 700;
+}
+.contact_data {
+    display: flex;
+    gap: 20px;
+    padding-left: 5%;
+    color: #3a3a3a;
+    margin-bottom: 3%;
+    align-items: center;
+}

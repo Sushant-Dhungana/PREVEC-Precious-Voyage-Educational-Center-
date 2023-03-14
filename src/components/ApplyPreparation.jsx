@@ -35,7 +35,7 @@ const ApplyPreparation = ({id}) => {
                     toast.success("Applied Successfully")
                     console.log(res)
                     setApplyPreperation(initialState)
-                    setError(" ")
+                    setError(false);
                 }
             )
             .catch((res) => {

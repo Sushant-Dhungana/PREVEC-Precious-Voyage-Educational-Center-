@@ -40,6 +40,9 @@
     align-items: center;
     justify-content: flex-end;
 }
+.top_third a {
+    text-decoration:none;
+}
 
 
 

@@ -15,6 +15,9 @@ import Preparation from './pages/Preparation';
 import Courses from './pages/Courses';
 import Information from './pages/Information';
 import IndividualInfo from './pages/IndividualInfo';
+import BookAppointment from './pages/BookAppointment';
+import ContactUs from './pages/ContactUs';
+import ApplyNowTop from './pages/ApplyNowTop';
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -48,6 +51,9 @@ const App = () => {
         <Route path="/courses" element={<Courses/>} />
         <Route path="/information" element ={<Information/>}/>
         <Route path="/information/:id" element={<IndividualInfo/>} />
+        <Route path="/bookappointment" element={<BookAppointment/>}/>
+        <Route path="/contactus"  element={<ContactUs/>} />
+        <Route path="/applynow" element={<ApplyNowTop/>} />
       </Routes>
       <Footer />
       </>
