@@ -1,0 +1,25 @@
+.services_main {
+    margin-top: 2%;
+}
+.services_main h4 {
+    text-align: center;
+    font-weight: 600;
+    color: #1174BC;
+    padding: 0;
+    margin: 3px;
+}
+.after_line_services_main{
+    width: 20%;
+    margin: 0 auto;
+    border-top: 2px solid #c75934;
+
+}
+.image_service_content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 2%;
+}
+.image_service_content, .services_content_desc {
+   padding-top: 10% !important;
+}

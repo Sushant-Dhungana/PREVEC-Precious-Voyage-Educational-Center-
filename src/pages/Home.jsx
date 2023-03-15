@@ -64,7 +64,7 @@ const Index = ({homeData}) => {
             <div className="after_line_services"></div>
             <h5 className="services_motto">We Provide Better and Lifting Up Opportunities</h5>
           </div>
-          <OurServices services={homeData.features} />
+          <OurServices services={homeData.services} />
           </div>
           </div>
         </section>

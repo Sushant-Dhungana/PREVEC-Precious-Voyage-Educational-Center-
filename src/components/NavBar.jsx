@@ -13,6 +13,11 @@ const NavBar = ({ navData }) => {
   const abroadData = navData?.abroads;
   const preparationData = navData?.preparation;
 
+  const offCanvasRef = React.useRef();
+
+  const closeOffCanvas = () => offCanvasRef.current.backdrop.click();
+
+
   //   return (
   //     <>
 
@@ -59,6 +64,7 @@ const NavBar = ({ navData }) => {
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="start"
+              ref={offCanvasRef}
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -67,13 +73,13 @@ const NavBar = ({ navData }) => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-between flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to={"/"} >Home</Nav.Link>
+                  <Nav.Link as={Link} to={"/"} data-bs-dismiss="offcanvas" onClick={closeOffCanvas}>Home</Nav.Link>
                   {
                     navbarData && navbarData?.length > 0 ? (
                       <NavDropdown title="Services" id={`offcanvasNavbarDropdown-expand-${expand}`}>
                         {
                           navbarData?.map((item, index) => (
-                            <NavDropdown.Item key={index} as={Link} to={`/services/${item?.slug}`}>{item?.title}</NavDropdown.Item>
+                            <NavDropdown.Item key={index} as={Link} to={`/services/${item?.slug}`} onClick={closeOffCanvas}>{item?.title}</NavDropdown.Item>
                           ))
                         }
                       </NavDropdown>
@@ -87,7 +93,7 @@ const NavBar = ({ navData }) => {
                       >
                         {
                           abroadData?.map((eq, index) => (
-                            <NavDropdown.Item key={index} as={Link} to={`/abroad-study/${eq?.id}`}>{eq?.title}</NavDropdown.Item>
+                            <NavDropdown.Item key={index} as={Link} to={`/abroad-study/${eq?.id}`} onClick={closeOffCanvas}>{eq?.title}</NavDropdown.Item>
                           ))
                         }
                       </NavDropdown>
@@ -99,8 +105,8 @@ const NavBar = ({ navData }) => {
                     title="About"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item as={Link} to={"/aboutus"}>About</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to={"/messagefromceo"}>
+                    <NavDropdown.Item as={Link} to={"/aboutus"} onClick={closeOffCanvas}>About</NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to={"/messagefromceo"} onClick={closeOffCanvas}>
                       Message From CEO
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -114,7 +120,7 @@ const NavBar = ({ navData }) => {
                         {
                           preparationData?.map((item, index) => (
                             <div className='dropdown-item' key={index}>
-                              <NavDropdown.Item as={Link} to={`/preparation/${item?.slug}`}>{item?.slug}</NavDropdown.Item>
+                              <NavDropdown.Item as={Link} to={`/preparation/${item?.slug}`} onClick={closeOffCanvas}>{item?.slug}</NavDropdown.Item>
                             </div>
                           ))
                         }
@@ -123,10 +129,10 @@ const NavBar = ({ navData }) => {
                     ) : "null"
                   }
 
-                  <Nav.Link as={Link} to={"/courses"}>Courses</Nav.Link>
-                  <Nav.Link as={Link} to={""}>Gallery</Nav.Link>
-                  <Nav.Link as={Link} to={"/information"}>Information</Nav.Link>
-                  <Nav.Link as={Link} to={"/contactus"}>Contact Us</Nav.Link>
+                  <Nav.Link as={Link} to={"/courses"} onClick={closeOffCanvas}>Courses</Nav.Link>
+                  <Nav.Link as={Link} to={""} onClick={closeOffCanvas}>Gallery</Nav.Link>
+                  <Nav.Link as={Link} to={"/information"} onClick={closeOffCanvas}>Information</Nav.Link>
+                  <Nav.Link as={Link} to={"/contactus"} onClick={closeOffCanvas}>Contact Us</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../styles/indexservices.css';
-const mvgUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/feature/"
+const mvgUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/service/"
 
 const OurServices = (props) => {
   const services = props.services
@@ -12,7 +12,7 @@ const OurServices = (props) => {
         <div className="row">
           
           {
-            services && services.map((item, index) => {
+            services && services?.slice(0,3).map((item, index) => {
               if (index % 2 === 0) {
                 return (
                   <div className="services_key" key={index}>
@@ -40,19 +40,6 @@ const OurServices = (props) => {
               }
             })
           }
-          {/* {
-            services && services.map((item, index) => (
-              <>
-              <div className={`col-md-6 ${index %2===0 ? " services_content":" services_image"}`}>
-                <h4>{item.title}</h4>
-                <p>{item.description.replace(regex, '')}</p>
-              </div>
-              <div className={`col-md-6 ${index %2 !==0 ? " services_image" :" services_content"}`}>
-                <img src={"http://192.168.1.2:8000/images/feature/" + item.image} alt="logo" />
-              </div>
-            </>
-            ))
-          } */}
         </div>
       </div>
     </div>
