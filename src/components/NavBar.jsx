@@ -130,7 +130,7 @@ const NavBar = ({ navData }) => {
                   }
 
                   <Nav.Link as={Link} to={"/courses"} onClick={closeOffCanvas}>Courses</Nav.Link>
-                  <Nav.Link as={Link} to={""} onClick={closeOffCanvas}>Gallery</Nav.Link>
+                  <Nav.Link as={Link} to={"/gallery"} onClick={closeOffCanvas}>Gallery</Nav.Link>
                   <Nav.Link as={Link} to={"/information"} onClick={closeOffCanvas}>Information</Nav.Link>
                   <Nav.Link as={Link} to={"/events"} onClick={closeOffCanvas}style={{color:"#a80a0a"}}>Events</Nav.Link>
                   <Nav.Link as={Link} to={"/contactus"} onClick={closeOffCanvas}>Contact Us</Nav.Link>

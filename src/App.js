@@ -19,6 +19,7 @@ import BookAppointment from './pages/BookAppointment';
 import ContactUs from './pages/ContactUs';
 import ApplyNowTop from './pages/ApplyNowTop';
 import Events from './pages/Events';
+import Gallery from './pages/Gallery';
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -56,6 +57,7 @@ const App = () => {
         <Route path="/contactus"  element={<ContactUs/>} />
         <Route path="/applynow" element={<ApplyNowTop/>} />
         <Route path="/events" element={<Events/>} />
+        <Route path='/gallery' element={<Gallery/>} />
       </Routes>
       <Footer />
       </>

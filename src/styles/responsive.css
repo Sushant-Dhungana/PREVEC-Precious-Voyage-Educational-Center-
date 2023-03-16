@@ -163,6 +163,9 @@
     .after_line_courses {
         width: 48% !important;
     }
+    .gallery_images {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
   }
   @media (min-width: 1000px){
     .react-tabs__tab-list {
@@ -430,6 +433,17 @@
     }
   
   
+  }
+  @media  (max-width:525px){
+    .gallery_images {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    .gallery_images img {
+        width: 80% !important;
+        height: 150px !important;
+        object-fit: contain;
+        margin: 0 auto;
+    }
   }
   @media (max-width:400px){
     .apply_button{

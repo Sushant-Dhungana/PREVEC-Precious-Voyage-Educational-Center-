@@ -12,6 +12,8 @@ const Events = () => {
     const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
+        window.scrollTo(0, 0)
+        setLoading(true)
         axiosBaseURL.get('/api/event').then(res => {
             setEvents(res.data)
             setLoading(false)
@@ -19,7 +21,6 @@ const Events = () => {
             console.log(err)
         });
     }, [])
-    console.log(events?.pastEvents);
 
     return (
         <div>
