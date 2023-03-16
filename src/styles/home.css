@@ -17,7 +17,7 @@
     background-color: #C75934;
 }
 .vision {
-    background-color: #1174BC;
+    background-color: Rgb(26 115 186);
 }
 .goal {
     background-color: #C75934;
@@ -180,6 +180,7 @@
 }
 .news_header h3 {
     color: #1174BC;
+    margin: 0;
 }
 .after_line_news {
     width: 15%;
@@ -187,10 +188,24 @@
     background-color: #c75934;
     margin-bottom:2% !important;
     margin-left: 44%;
+    margin-top: 5px;
 }
 .news_main h6 {
     text-align: center;
     color: #585756;
     font-weight: 600;
 }
-
+.events_header {
+    text-align: left;
+}
+.events_header h4 {
+    color: #1174BC;
+    margin: 0;
+}
+.after_line_events {
+    width: 10%;
+    height: 3px;
+    background-color: #c75934;
+    margin-bottom:2% !important;
+    margin-top: 2px;
+}

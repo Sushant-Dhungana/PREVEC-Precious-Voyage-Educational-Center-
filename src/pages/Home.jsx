@@ -9,7 +9,7 @@ import OurServices from "../components/OurServices";
 import Associations from "../components/Associations";
 import MVG from "../components/MVG";
 import Testimonials from "../components/Testimonials";
-import NewsEvents from "../components/NewsEvents";
+import Blogs from "../components/Blogs";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 import Callback from "../components/Callback";
 import StudyInIndividual from "../components/StudyInIndividual";
@@ -85,13 +85,13 @@ const Index = ({homeData}) => {
               <div className="col-md-12 news_main">
                 <div className="news_header">
                   < BsFillCalendarCheckFill size={30} style={{ color: "rgb(167 4 4 / 69%)" }} />
-                  <h3>News & Events</h3>
+                  <h3>Blogs & Information</h3>
                 </div>
                 <div className="after_line_news"></div>
               </div>
             </div>
           </div>
-          <NewsEvents news={homeData.news.slice(0,4)} />
+          <Blogs news={homeData.news.slice(0,4)} />
         </section>
         <section className="index_testimonials">
           <div className="container">

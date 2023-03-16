@@ -1,10 +1,12 @@
 import React from 'react';
 import '../styles/studyabroad.css';
 import "../styles/button.css"
+import { Link } from 'react-router-dom';
 const cardUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/abroad/"
 const circleUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/abroad/banner/"
 const StudyAbroad = (props) => {
     const studyabroads = props.studyabroad;
+
     return (
         <div>
             <div className="container">
@@ -18,7 +20,7 @@ const StudyAbroad = (props) => {
                                 </div>
                                 <h6>{item.title}</h6>
                                 <div className="learn_more">
-                                    <button>Learn More</button>
+                                    <Link to={`/abroad-study/${item?.id}`} >Learn More</Link>
                                 </div>
                             </div>
                         </div>

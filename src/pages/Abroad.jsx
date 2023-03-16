@@ -19,7 +19,9 @@ const Abroad = ({ props }) => {
   const { id } = useParams();
   const [abroadPageData, setAbroadPageData] = React.useState({});
   const [isLoading, setIsLoading] = React.useState(true);
+
   React.useEffect(() => {
+    window.scrollTo(0, 0)
     axiosBaseURL.get(`/api/abroad-study/${id}`)
       .then(res => {
         setAbroadPageData(res.data);

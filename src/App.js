@@ -18,6 +18,7 @@ import IndividualInfo from './pages/IndividualInfo';
 import BookAppointment from './pages/BookAppointment';
 import ContactUs from './pages/ContactUs';
 import ApplyNowTop from './pages/ApplyNowTop';
+import Events from './pages/Events';
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -54,6 +55,7 @@ const App = () => {
         <Route path="/bookappointment" element={<BookAppointment/>}/>
         <Route path="/contactus"  element={<ContactUs/>} />
         <Route path="/applynow" element={<ApplyNowTop/>} />
+        <Route path="/events" element={<Events/>} />
       </Routes>
       <Footer />
       </>

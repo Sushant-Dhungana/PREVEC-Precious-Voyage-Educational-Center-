@@ -13,8 +13,8 @@ const Services = (props) => {
   const [serviceData, setServiceData] = React.useState({});
   const [isLoading, setIsLoading] = React.useState(true);
 
-
   React.useEffect(() => {
+    window.scrollTo(0, 0)
     axiosBaseURL.get(`/api/service/${slug}`)
       .then(res => {
         setServiceData(res.data);

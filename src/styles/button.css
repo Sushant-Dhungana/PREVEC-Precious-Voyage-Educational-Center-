@@ -32,6 +32,22 @@
     color: #c75934;
     border: 1px solid #c75934;
 }
+.learn_more a {
+    background-color: #C75934;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    width: 70%;
+    border: 1px solid #c75934;
+    transition: ease all 0.5s;
+    text-decoration: none;
+}
+.learn_more a:hover {
+    background-color: #ffffff;
+    color: #c75934;
+    border: 1px solid #c75934;
+}
 .read_more {
     background-color: #1174BC;
     border: none;

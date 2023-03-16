@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const newsUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/news/"
 
 
-const NewsEvents = ({news}) => {
+const Blogs = ({ news }) => {
     const newsEvents = news;
     const regex = /(<([^>]+)>)/ig;
     return (
@@ -14,21 +14,21 @@ const NewsEvents = ({news}) => {
                     {
                         newsEvents && newsEvents.map((item, index) => (
                             <div className="col-md-3" key={index}>
-                            <div className='news_card'>
-                                <div className="image_section">
-                                    <img src={newsUrl + item.image} alt="news_image"/>
-                                    <p>{new Date(item.created_at).toLocaleDateString()}</p>
+                                <div className='news_card'>
+                                    <div className="image_section">
+                                        <img src={newsUrl + item.image} alt="news_image" />
+                                        <p>{new Date(item.created_at).toLocaleDateString()}</p>
+                                    </div>
+                                    <Link to={`/information/${item?.id}`} ><h6>{item.description.replace(regex, '').substring(0, 25)}</h6></Link>
                                 </div>
-                               <Link to={`/information/${item?.id}`} ><h6>{item.description.replace(regex, '').substring(0, 25)}</h6></Link> 
-                            </div> 
-                        </div>
+                            </div>
                         ))
                     }
-                   
+
                 </div>
             </div>
         </div>
     )
 }
 
-export default NewsEvents
+export default Blogs

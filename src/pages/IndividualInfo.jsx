@@ -17,6 +17,7 @@ const IndividualInfo = ({props}) => {
   const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     axiosBaseURL.get(`/api/news/${id}`).then((res) => {
       setIndividualData(res?.data)
       setLoading(false)

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import NewsEvents from '../components/NewsEvents'
+import NewsEvents from '../components/Blogs'
 import axiosBaseURL from '../baseUrl'
 import '../styles/banner.css'
 import bannerInformation from '../images/banner.png'
@@ -11,6 +11,7 @@ const Information = () => {
     const [loading, setLoading] = React.useState(false)
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         setLoading(true)
         axiosBaseURL.get('/api/news')
             .then((res) => {

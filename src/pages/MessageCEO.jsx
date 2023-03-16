@@ -5,7 +5,7 @@ import "../styles/responsive.css"
 import { AiFillFacebook, AiOutlineTwitter, AiFillLinkedin, AiOutlineWhatsApp } from "react-icons/ai";
 import {BsFillCalendarCheckFill} from 'react-icons/bs';
 import axiosBaseURL from '../baseUrl';
-import NewsEvents from '../components/NewsEvents';
+import NewsEvents from '../components/Blogs';
 import "../styles/banner.css"
 
 const MessageCEO = () => {

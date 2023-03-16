@@ -173,6 +173,8 @@
         justify-content: space-evenly;
         height: fit-content;
     }
+
+    
   }
   @media (max-width:1200px){
     .above_abroad {
@@ -409,6 +411,9 @@
     height: 150px !important;
     object-fit: cover;
 }
+.after_line_events {
+    width: 30%;
+}
 
   }
   @media (max-width:765px){
@@ -418,6 +423,10 @@
     .top_third {
         margin-top: 3%;
         text-align: center;
+    }
+    .apply_col {
+        margin-top: 3%;
+        z-index: 5;
     }
   
   

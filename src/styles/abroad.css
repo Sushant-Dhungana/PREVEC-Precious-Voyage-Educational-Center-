@@ -55,6 +55,9 @@
     padding: 10px;
     color: #C75934;
 }
+.basic_info_main h5 {
+    margin: 0;
+}
 .information {
     display: flex;
     flex-direction: row;
