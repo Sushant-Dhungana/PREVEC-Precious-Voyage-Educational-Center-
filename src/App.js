@@ -23,6 +23,7 @@ import Gallery from './pages/Gallery';
 const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     axiosBaseURL.get("/api/index", {
     }).then((res) => {
