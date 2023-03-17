@@ -11,4 +11,4 @@ const SpinnerMain = () => {
 }
 
 export default SpinnerMain
- 
+  

@@ -7,6 +7,7 @@
     }
 }
 @media (max-width:1000px){
+ 
     .nav_global {
         width: 100%;
     }
@@ -17,13 +18,15 @@
         width: 100px;
         height: 40px;
     }
-    .top_second {
-        display: none;
-    }
+   
     .top_third {
         display: block;
         margin:  auto;
         margin-left: 50%;
+    }
+    .top_second {
+    
+        justify-content: center !important;
     }
     .apply_button{
         background-color: #C75934;
@@ -31,6 +34,7 @@
         padding: 3px 10px;
         border-radius: 5px;
         margin-left: 20px;
+        top: 71px !important;
         color: #fff;
     }
     .carousel_main {
@@ -181,7 +185,7 @@
     .top_third .apply_button {
         width: 135px;
         height: 38px;
-    
+    text-align:center;
     }
     .apply_button{
         position: absolute;
@@ -193,7 +197,15 @@
     z-index: 10000;
 }
   }
-  @media (max-width:1000px) and (min-width:765px){
+  @media (max-width:767px){
+    .apply_button{
+        top: 125px !important;
+    }
+    .book_appointment{
+        margin: 2%;
+    }
+  }
+  @media (min-width:765px) and (max-width:1000px){
     .card_col {
         width: 100%;
     }
@@ -265,7 +277,15 @@
 
     
   }
+ 
   @media (max-width:765px){
+    .logo_main {
+        padding-top: 2%;
+     }
+     .top_third {
+         margin-top: 3%;
+         text-align: center;
+     }
     .top_third  {
         display: block;
         margin: 0 auto;
@@ -411,50 +431,9 @@
 }
 
   }
-  @media (max-width:765px){
-    .logo_main {
-       padding-top: 2%;
-    }
-    .top_third {
-        margin-top: 3%;
-        text-align: center;
-    }
+
+
+ 
   
+ 
   
-  }
-  @media (max-width:400px){
-    .apply_button{
-        position: absolute;
-        top: 77px;
-        z-index: 9999;
-        right: 21px;
-    }
-  }
-  @media (min-width:400px) and (max-width:450px){
-    .apply_button{
-       
-        top: 81px;
-       
-    }
-  }
-  @media (min-width:450px) and (max-width:525px){
-    .apply_button{
-       
-        top: 86px;
-      
-    }
-  }
-  @media (min-width:525px) and (max-width:766px){
-    .apply_button{
-        
-        top: 91px;
-       
-    }
-  }
-  @media (min-width:766px) and (max-width:1000px){
-    .apply_button{
-       
-        top: 68px;
-       
-    }
-  }

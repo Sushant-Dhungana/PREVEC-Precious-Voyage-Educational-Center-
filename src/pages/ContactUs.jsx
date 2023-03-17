@@ -1,11 +1,60 @@
 import React from 'react'
+import axiosBaseURL from '../baseUrl';
 import bannerContact from '../images/banner.png'
 import '../styles/contactus.css'
 import { IoCall } from 'react-icons/io5'
 import {MdEmail} from 'react-icons/md'
 import {ImLocation,ImWhatsapp} from 'react-icons/im'
+import { toast, ToastContainer } from 'react-toastify';
+
 
 const ContactUs = () => {
+    const [contactUs, setContactUs] = React.useState({
+        name: '',
+        email: '',
+        phone: '',                
+        description: '',
+       
+    });
+    const [error, setError] = React.useState(false);
+    const { name, email, phone, description } = contactUs;
+
+    const handleChange = (e) => {
+        setContactUs({
+            ...contactUs,
+            [e.target.name]: e.target.value
+          });
+        }
+   
+    var bodyFormData = new FormData();
+    Object.entries(contactUs).forEach(([key, value]) => {
+        bodyFormData.append(key, value);
+      });
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axiosBaseURL.post(`/api/contact`, bodyFormData, { headers: { 'Content-Type': 'application/json' } })
+        .then(
+            (res)=>{
+                toast.success("Applied Successfully")
+                console.log(res)
+                setContactUs({
+                    name: '',
+                    email: '',
+                    phone: '',                   
+                    description: '',
+                  
+                })
+                setError(" ")
+            }
+        )
+        .catch((res)=>{
+            setError(res?.response?.data?.errors)
+            toast.error("Please Fill All Fields")
+        });
+
+}
+
+
     return (
         <div>
             <div className="banner_main">
@@ -22,37 +71,33 @@ const ContactUs = () => {
                         <p>Be Sure We Don't Dissapoints Our Students</p>
                     </div>
                     <div className="col-md-12 form_cols">
-                        <form className='book_appointment_form'>
+                        <form className='book_appointment_form' onSubmit={handleSubmit}>
                             <div className="book_fields">
                                 <label htmlFor="fullname">Full Name<span>*</span></label>
-                                <input type="text" name='fullname' required />
-                                {/* {error?.fullname && <p className='error'>{error?.fullname}</p>} */}
+                                <input type="text" name='name'value={name} required onChange={handleChange}/>
+                                {error?.fullname && <p className='error'>{error?.fullname}</p>}
                             </div>
                             <div className="book_fields">
                                 <label htmlFor="email">Email<span>*</span></label>
-                                <input type="email" name='email' required />
-                                {/* {error?.email && <p className='error'>{error?.email}</p>} */}
+                                <input type="email" name='email' required value={email} onChange={handleChange}/>
+                                {error?.email && <p className='error'>{error?.email}</p>}
                             </div>
                             <div className="book_fields">
                                 <label htmlFor="phone">Phone Number<span>*</span></label>
-                                <input type="tel" name='phone' required />
-                                {/* {error?.phone && <p className='error'>{error?.phone}</p>} */}
+                                <input type="number" name='phone' required value={phone} onChange={handleChange}/>
+                                {error?.phone && <p className='error'>{error?.phone}</p>}
                             </div>
-                            <div className="book_fields">
-                                <label htmlFor="address">Address</label>
-                                <input type="text" name='address' />
-                                {/* {error?.address && <p className='error'>{error?.address}</p>} */}
-                            </div>
+                            
                             <div className="book_fields">
                                 <label htmlFor="message">Message <span>(if any)</span></label>
-                                <textarea name="message" id="message" cols="30" rows="5"></textarea>
-                                {/* {error?.query && <p className='error'>{error?.query}</p>} */}
+                                <textarea name="description" id="message" cols="30" rows="5" value={description} onChange={handleChange}></textarea>
+                             
                             </div>
                             <div className="submit_button_abroad">
                                 <button type='submit' className='apply_now_abroad'>Book Now</button>
                             </div>
                         </form>
-                        {/* <ToastContainer/> */}
+                        <ToastContainer/>
                     </div>
                     <div className="col-md-12 address_col">
                         <div className="contact_address">
@@ -102,5 +147,6 @@ const ContactUs = () => {
         </div>
     )
 }
+
 
 export default ContactUs

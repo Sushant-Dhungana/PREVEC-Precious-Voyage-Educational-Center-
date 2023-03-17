@@ -38,7 +38,7 @@
 .top_third {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .top_third a {
     text-decoration:none;
