@@ -2,8 +2,8 @@ import React, { useEffect, useState, useCallback } from "react";
 import galleryImage from "../images/banner.png";
 import "../styles/gallery.css";
 import axiosBaseURL from "../baseUrl";
-import { render } from "react-dom";
 import ImageViewer from "react-simple-image-viewer";
+import SpinnerMain from "../components/Spinner";
 
 const imageUrl = "http://precious-voyage.onvirotech.com/images/gallery/";
 
@@ -53,41 +53,44 @@ const Gallery = () => {
         <div className="row">
           <div className="col-md-12">
             <div className="gallery_topic">
-              <h4>Our <span>Gallery</span></h4>
+              <h4>
+                Our <span>Gallery</span>
+              </h4>
               <div className="after_line_gallery"></div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container gallery_images_container">
-      <div className="row">
-            {images?.map((image, index) => (
-             
-              <div className="col-md-3 gallery_images" key={index}>
-                <img
-                  src={imageUrl + image.image}
-                  alt="gallery"
-                  className="gallery_image"
-                  onClick={() => openImageViewer(index)}
-                />
+      {loading ? <SpinnerMain /> :
+            <div className="container gallery_images_container">
+            <div className="row">
+              {images?.map((image, index) => (
+                <div className="col-md-3 gallery_images" key={index}>
+                  <img
+                    src={imageUrl + image.image}
+                    alt="gallery"
+                    className="gallery_image"
+                    onClick={() => openImageViewer(index)}
+                  />
+                </div>
+              ))}
+              <div className="preview_image">
+                {isViewerOpen && (
+                  <ImageViewer
+                    src={imagesMain}
+                    currentIndex={currentImage}
+                    disableScroll={true}
+                    closeOnClickOutside={true}
+                    backgroundStyle={{ backgroundColor: "rgba(50, 50, 50, 0.9)" }}
+                    onClose={closeImageViewer}
+                  />
+                )}
               </div>
-              
-            ))}
-<div className="preview_image">
-            {isViewerOpen && (
-              <ImageViewer
-                src={imagesMain}
-                currentIndex={currentImage}
-                disableScroll={true}
-                closeOnClickOutside={true}
-                backgroundStyle={{backgroundColor: "rgba(50, 50, 50, 0.9)"}}
-                onClose={closeImageViewer}
-              />
-            )}
             </div>
           </div>
-        </div>
-        </div>
+      }
+
+    </div>
   );
 };
 
