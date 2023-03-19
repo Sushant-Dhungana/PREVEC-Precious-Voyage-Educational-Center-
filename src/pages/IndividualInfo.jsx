@@ -6,11 +6,13 @@ import individualbanner from '../images/banner.png'
 import '../styles/banner.css'
 import '../styles/individualinfo.css'
 import "../styles/responsive.css"
+import { Helmet } from 'react-helmet'
+import { baseUrl } from '../baseUrl'
 
 const imageBaseUrl = "http://precious-voyage.onvirotech.com";
 
-const IndividualInfo = ({props}) => {
-  const {id} = useParams()
+const IndividualInfo = ({ props }) => {
+  const { id } = useParams()
   console.log(id);
 
   const [individualData, setIndividualData] = React.useState([]);
@@ -28,6 +30,9 @@ const IndividualInfo = ({props}) => {
   console.log(individualData);
   return (
     <div>
+      <Helmet>
+        <title>Blogs</title>
+      </Helmet>
       <div className="banner_main">
         <div className="banner">
           <img src={individualbanner} alt="information" />
@@ -35,28 +40,28 @@ const IndividualInfo = ({props}) => {
         </div>
       </div>
       {
-        loading? <SpinnerMain/> :
-        <>
-<div className="container individual">
-        <div className="row">
-          <div className="col-md-12 created_at">
-           <p>{new Date(individualData?.news?.created_at).toLocaleDateString()}</p> 
-          </div>
-          <div className="col-md-8">
-            <div className="individual_info">
-              <p dangerouslySetInnerHTML={{__html: individualData?.news?.description}}></p>
+        loading ? <SpinnerMain /> :
+          <>
+            <div className="container individual">
+              <div className="row">
+                <div className="col-md-12 created_at">
+                  <p>{new Date(individualData?.news?.created_at).toLocaleDateString()}</p>
+                </div>
+                <div className="col-md-8">
+                  <div className="individual_info">
+                    <p dangerouslySetInnerHTML={{ __html: individualData?.news?.description }}></p>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="individual_image">
+                    <img src={baseUrl + "/images/news/" + individualData?.news?.image} alt="individual" />
+                  </div>
+                </div>
               </div>
-          </div>
-          <div className="col-md-4">
-            <div className="individual_image">
-              <img src={imageBaseUrl+"/images/news/"+individualData?.news?.image} alt="individual" />
             </div>
-          </div>
-        </div>
-      </div>
-        </>
+          </>
       }
-      
+
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/mvg.css"
-const mvgUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/feature/"
+const mvgUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com"
 const MVG = ({feature}) => {
     const regex = /(<([^>]+)>)/ig;
     const MVGcontent = feature;
@@ -15,7 +15,7 @@ const MVG = ({feature}) => {
                   <div className="container">
                     <div className="row">
                       <div className="col-md-3 main_logo" style={{color:"#fff"}}>
-                        <img src={mvgUrl +item.image} alt="logo" />
+                        <img src={mvgUrl+"/images/feature/" +item?.image} alt="logo" />
                       </div>
                       <div className="col-md-9 mvg_main">
                         <h5>{item.title}</h5>

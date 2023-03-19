@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/universities.css";
 
+const universitiesUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/"
+
 const Universities = (data) => {
     const  universities =data ;
     var settings= {
@@ -36,7 +38,7 @@ const Universities = (data) => {
                 {
                     universities?.data && universities?.data?.map((item, index) => (
                         <div className='universitiess_main' key={index}>
-                            <img src={"http://precious-voyage.onvirotech.com/"+item?.university_image} alt={item.abroad_study_id} />
+                            <img src={universitiesUrl+item?.university_image} alt={item.abroad_study_id} />
                             </div>
                     ))
                 }

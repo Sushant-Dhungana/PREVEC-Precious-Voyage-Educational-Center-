@@ -4,6 +4,7 @@ import axiosBaseURL from '../baseUrl'
 import '../styles/banner.css'
 import bannerInformation from '../images/banner.png'
 import SpinnerMain from '../components/Spinner'
+import { Helmet } from 'react-helmet'
 
 const Information = () => {
 
@@ -25,6 +26,9 @@ const Information = () => {
     }, []);
     return (
         <div>
+            <Helmet>
+                <title>Blogs & Information</title>
+            </Helmet>
             <div className="banner_main">
                 <div className="banner">
                     <img src={bannerInformation} alt="information" />

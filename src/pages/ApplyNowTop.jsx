@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Collapse from 'react-bootstrap/Collapse';
 import { toast, ToastContainer } from 'react-toastify';
 import axiosBaseURL from '../baseUrl';
+import { Helmet } from 'react-helmet';
 
 const ApplyNowTop = () => {
     const initialStates = {
@@ -67,6 +68,9 @@ const ApplyNowTop = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Apply Now</title>
+            </Helmet>
             <div className="banner_main">
                 <div className="banner">
                     <img src={bannerApplynow} alt="appointment" />

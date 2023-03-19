@@ -4,8 +4,8 @@ import { BsFillCalendarCheckFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import axiosBaseURL from '../baseUrl';
 import Spinner from '../components/Spinner';
-
-const eventUrl = "http://precious-voyage.onvirotech.com/images/event/"
+import { Helmet } from 'react-helmet';
+import { baseUrl } from '../baseUrl';
 
 const Events = () => {
     const [events, setEvents] = React.useState([]);
@@ -24,6 +24,9 @@ const Events = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Events and Blogs</title>
+            </Helmet>
             <div className="banner_main">
                 <div className="banner">
                     <img src={eventBanner} alt="banner" />
@@ -56,7 +59,7 @@ const Events = () => {
                                     <div className="col-md-3" key={index}>
                                         <div className='news_card'>
                                             <div className="image_section">
-                                                <img src={eventUrl + item.image} alt="news_image" />
+                                                <img src={baseUrl +"/images/event/"+ item.image} alt="news_image" />
                                                 <p>{new Date(item?.event_date).toLocaleDateString([], { hour: '2-digit', minute: '2-digit' })}</p>
                                             </div>
                                             <Link to={`/information/${item?.id}`} ><h6 dangerouslySetInnerHTML={{ __html: item.description }}></h6></Link>
@@ -77,7 +80,7 @@ const Events = () => {
                                     <div className="col-md-3" key={index}>
                                         <div className='news_card'>
                                             <div className="image_section">
-                                                <img src={eventUrl + item.image} alt="news_image" />
+                                                <img src={baseUrl +"/images/event/"+ item.image} alt="news_image" />
                                                 <p>{new Date(item?.event_date).toLocaleDateString([], { hour: '2-digit', minute: '2-digit' })}</p>
                                             </div>
                                             <Link to={`/information/${item?.id}`} ><h6 dangerouslySetInnerHTML={{ __html: item.description }}></h6></Link>

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import { FiMail } from "react-icons/fi"
 import { toast, ToastContainer } from 'react-toastify';
 import axiosBaseURL from '../baseUrl';

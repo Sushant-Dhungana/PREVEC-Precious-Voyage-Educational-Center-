@@ -5,6 +5,7 @@ import '../styles/preparation.css'
 import axiosBaseURL from '../baseUrl'
 import ApplyPreparation from '../components/ApplyPreparation'
 import "../styles/banner.css"
+import { Helmet } from 'react-helmet'
 
 const Preparation = ({ props }) => {
     const [preparationData, setPreparationData] = React.useState({})
@@ -21,26 +22,31 @@ const Preparation = ({ props }) => {
     }, [props?.match?.params?.slug, slug]);
     const id = preparationData?.preparation?.id;
     return (
-        <div className='preparation_main'>
-            <div className="banner_main">
-            <div className="banner">
-                <img src={banner} alt="preparation banner" className='banner_image' />
-                <h4>Preparation</h4>
-            </div>
-            </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-8 preparation_content">
-                        <div dangerouslySetInnerHTML={{ __html: preparationData?.preparation?.description }}></div>
+        <>
+            <Helmet>
+                <title>{`${preparationData?.preparation?.title} | Preperation` }</title>
+            </Helmet>
+            <div className='preparation_main'>
+                <div className="banner_main">
+                    <div className="banner">
+                        <img src={banner} alt="preparation banner" className='banner_image' />
+                        <h4>Preparation</h4>
                     </div>
-                    <div className="col-md-4 apply_preparation">
-                        <div className="preparation_form">
-                            <ApplyPreparation  id = {id}/>
+                </div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-8 preparation_content">
+                            <div dangerouslySetInnerHTML={{ __html: preparationData?.preparation?.description }}></div>
+                        </div>
+                        <div className="col-md-4 apply_preparation">
+                            <div className="preparation_form">
+                                <ApplyPreparation id={id} />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

@@ -7,6 +7,7 @@ import {MdContactPhone} from 'react-icons/md'
 import {ImLocation} from 'react-icons/im'
 import {IoCall} from 'react-icons/io5'
 import {BiMailSend} from 'react-icons/bi'
+import { Helmet } from 'react-helmet'
 
 
 const BookAppointment = () => {
@@ -50,6 +51,9 @@ const BookAppointment = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Book Appointment</title>
+            </Helmet>
             <div className="banner_main">
                 <div className="banner">
                     <img src={bannerAppointment} alt="appointment" />

@@ -4,7 +4,7 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import "../styles/associations.css"
 
-const associationsUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/association/"
+const associationsUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com"
 
 const Associations = ({association}) => {
     const associations = association;
@@ -16,16 +16,16 @@ const Associations = ({association}) => {
         // navText: ["Prev", "Next"],
       
         autoplayHoverPause: true,
-        slideTransition: 'linear',
+        slidetransition: 'linear',
         autoplaySpeed: 30000,
         autoplayTimeout: 5000,
         loop: true,
         responsive: {
             0: {
-                items: 1,
+                items: 2,
             },
             400: {
-                items: 1,
+                items: 2,
             },
             600: {
                 items: 2,
@@ -43,7 +43,7 @@ const Associations = ({association}) => {
     <div>
 <OwlCarousel className="slider-items owl-carousel" {...options}>
     {associations && associations.map((item, index) => (
-                      <div className="item" key={index}><img src={associationsUrl + item.image} alt={item.id}/></div>
+                      <div className="item" key={index}><img src={associationsUrl+"/images/association/" + item.image} alt={item.id}/></div>
     ))}
 
                   </OwlCarousel>

@@ -4,7 +4,8 @@ import coursesbanner from "../images/banner.png";
 import "../styles/courses.css";
 import "../styles/button.css"
 import SpinnerMain from '../components/Spinner';
-const imageBaseUrl = "http://precious-voyage.onvirotech.com";
+import { Helmet } from 'react-helmet';
+import { baseUrl } from '../baseUrl';
 
 const Courses = () => {
 
@@ -24,6 +25,9 @@ const Courses = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Courses</title>
+            </Helmet>
             <div className="banner_main">
                 <div className="banner">
                     <img src={coursesbanner} alt="courses" />
@@ -46,9 +50,9 @@ const Courses = () => {
                                         item?.courses?.map((eq, index) => (
                                             <div className="col-md-3 course_card_col" key={index}>
                                                 <div className="course_card">
-                                                    <img src={imageBaseUrl + "/images/course/" + eq?.image} alt="courses" />
+                                                    <img src={baseUrl + "/images/course/" + eq?.image} alt="courses" />
                                                     <div className="course_logo">
-                                                        <img src={imageBaseUrl + "/images/course/logo/" + eq?.logo} alt="logo" />
+                                                        <img src={baseUrl + "/images/course/logo/" + eq?.logo} alt="logo" />
                                                     </div>
                                                     <h4>{eq?.title}</h4>
                                                     <div className="enroll_button">

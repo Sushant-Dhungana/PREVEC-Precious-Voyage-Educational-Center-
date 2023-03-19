@@ -5,3 +5,5 @@ const axiosBaseURL = Axios.create({
 
 });
 export default axiosBaseURL;
+
+export const baseUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com";

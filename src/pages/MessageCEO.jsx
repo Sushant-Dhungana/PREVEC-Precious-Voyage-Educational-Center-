@@ -7,6 +7,8 @@ import {BsFillCalendarCheckFill} from 'react-icons/bs';
 import axiosBaseURL from '../baseUrl';
 import NewsEvents from '../components/Blogs';
 import "../styles/banner.css"
+import { Helmet } from 'react-helmet';
+import {baseUrl} from '../baseUrl';
 
 const MessageCEO = () => {
     const [messageData, setMessageData] = React.useState({})
@@ -17,6 +19,10 @@ const MessageCEO = () => {
     }, []);
     console.log(messageData);
     return (
+        <>
+        <Helmet>
+            <title>Message from CEO</title>
+        </Helmet>
         <div className='messageceo_main'>
             <div className="banner">
                 <img src={banner} alt="message banner" className='banner_image' />
@@ -26,7 +32,7 @@ const MessageCEO = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="message_content_head">
-                            <img src={"http://precious-voyage.onvirotech.com/images/ceo/" + messageData?.ceo?.image} alt="message banner" className='banner_image' />
+                            <img src={baseUrl+ "/images/ceo/"+ messageData?.ceo?.image} alt="message banner" className='banner_image' />
                             <h5>{messageData?.ceo?.title}</h5>
                             <p>Founder Ceo</p>
                             <div className="social_media_links">
@@ -60,6 +66,7 @@ const MessageCEO = () => {
                 <NewsEvents news={messageData?.news?.slice(0,4)}/>
             </section>
         </div>
+        </>
     )
 }
 

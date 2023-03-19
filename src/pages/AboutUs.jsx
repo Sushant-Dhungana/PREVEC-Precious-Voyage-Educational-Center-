@@ -6,6 +6,8 @@ import banner from "../images/banner.png"
 import { MdMiscellaneousServices } from "react-icons/md";
 import OurServices from '../components/OurServices'
 import "../styles/banner.css"
+import { Helmet } from 'react-helmet'
+import { baseUrl } from '../baseUrl'
 
 const AboutUs = () => {
   const [aboutUsData, setAboutUsData] = React.useState({})
@@ -23,6 +25,10 @@ const AboutUs = () => {
   }, []);
 
   return (
+    <>
+    <Helmet>
+      <title>About Us</title>
+    </Helmet>
     <div className="about_us_main">
       <div className="banner_main">
         <div className="banner">
@@ -107,7 +113,7 @@ const AboutUs = () => {
               aboutUsData?.teams?.map((team, index) => (
                 <div className="col-md-3" key={index}>
                 <div className="our_team_card">
-                  <img src={"http://precious-voyage.onvirotech.com/images/team/" + team?.image} alt="team" />
+                  <img src={baseUrl +"/images/team/" + team?.image} alt="team" />
                   <h5>{team?.title}</h5>
                   <p>{team?.role}</p>
                 </div>
@@ -120,6 +126,7 @@ const AboutUs = () => {
 
       </section>
     </div>
+    </>
   )
 }
 

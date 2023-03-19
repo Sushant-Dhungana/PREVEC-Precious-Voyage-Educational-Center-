@@ -7,6 +7,8 @@ import "../styles/responsive.css"
 import "../styles/banner.css"
 import "../styles/services.css"
 import bannerServices from "../images/banner.png"
+import { Helmet } from 'react-helmet';
+import { baseUrl } from '../baseUrl';
 
 const Services = (props) => {
   const { slug } = useParams();
@@ -27,6 +29,13 @@ const Services = (props) => {
 
   return (
     <>
+   {
+                  serviceData?.services?.map((item, index) => (
+                    <Helmet key={index}>
+                      <title>{`${item?.title} | Services`}</title>
+                    </Helmet>
+                  ))
+   }
       <div className="banner_main">
         <div className="banner">
           <img src={bannerServices} alt="about banner" className='banner_image' />
@@ -40,7 +49,7 @@ const Services = (props) => {
               <div className="row">
                 {
                   serviceData?.services?.map((item, index) => (
-                    <div>
+                    <div key={index}>
                       <div className="col-md-12">
                         <div className="services_main">
                           <h4>{item?.title}</h4>
@@ -52,7 +61,7 @@ const Services = (props) => {
                           <div className="row">
                             <div className="col-md-4">
                               <div className="image_service_content">
-                                <img src={"http://precious-voyage.onvirotech.com/images/service/" + item?.image} alt="service" className="image_service" />
+                                <img src={baseUrl +"/images/service/"+ item?.image} alt="service" className="image_service" />
                               </div>
                             </div>
                             <div className="col-md-8">
@@ -73,7 +82,7 @@ const Services = (props) => {
                             </div>
                             <div className="col-md-4">
                               <div className="image_service_content">
-                                <img src={"http://precious-voyage.onvirotech.com/images/service/" + item?.image} alt="service" className="image_service" />
+                                <img src={baseUrl +"/images/service/"+ item?.image} alt="service" className="image_service" />
                               </div>
                             </div>
                             </div>

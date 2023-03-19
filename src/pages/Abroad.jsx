@@ -13,6 +13,8 @@ import { BiBuildings } from 'react-icons/bi';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Universities from '../components/Universities';
+import { Helmet } from 'react-helmet';
+import { baseUrl } from '../baseUrl';
 
 
 const Abroad = ({ props }) => {
@@ -35,13 +37,16 @@ const Abroad = ({ props }) => {
 
   return (
     <>
+    <Helmet>
+      <title> Abroad Study</title>
+    </Helmet>
       {isLoading ? <SpinnerMain /> :
         <div>
           <div className="abroads_main">
             <div className="abroads_banner">
-              <img src={"http://precious-voyage.onvirotech.com/images/abroad/banner/" + abroadData?.banner} alt="abroad study" />
+              <img src={baseUrl+"/images/abroad/banner/" + abroadData?.banner} alt="abroad study" />
               <div className="banner_above">
-                <img src={"http://precious-voyage.onvirotech.com/images/abroad/" + abroadData?.image} alt="abroad study" />
+                <img src={baseUrl +"/images/abroad/" + abroadData?.image} alt="abroad study" />
                 <h5>{abroadData?.title}</h5>
               </div>
             </div>

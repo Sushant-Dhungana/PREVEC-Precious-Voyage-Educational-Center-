@@ -4,6 +4,7 @@ import "../styles/gallery.css";
 import axiosBaseURL from "../baseUrl";
 import ImageViewer from "react-simple-image-viewer";
 import SpinnerMain from "../components/Spinner";
+import { Helmet } from "react-helmet";
 
 const imageUrl = "http://precious-voyage.onvirotech.com/images/gallery/";
 
@@ -43,6 +44,9 @@ const Gallery = () => {
   });
   return (
     <div>
+      <Helmet>
+        <title>Gallery</title>
+      </Helmet>
       <div className="banner_main">
         <div className="banner">
           <img src={galleryImage} alt="gallery" />

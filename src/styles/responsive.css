@@ -1,158 +1,227 @@
-@media (max-width:1300px){
+@media (max-width:1300px) {
     .course_logo {
         position: relative;
         margin-top: -20%;
         margin-left: 25% !important;
-    
+
     }
 }
-@media (max-width:1000px){
+@media (max-width:1200px) {
+    .above_abroad {
+        left: 22%;
+    }
+
+    .top_third .apply_button {
+        width: 135px;
+        height: 38px;
+
+    }
+
+    .apply_button {
+        position: absolute;
+
+        z-index: 9999;
+        right: 21px;
+    }
+
+    .offcanvas {
+        z-index: 10000;
+    }
+}
+
+@media (max-width:1000px) {
     .nav_global {
         width: 100%;
     }
+
     .logo_main {
         text-align: center;
     }
+
     .logo_top {
         width: 100px;
         height: 40px;
     }
+
     .top_second {
-        display: none;
+        justify-content: center !important;
     }
+
     .top_third {
         display: block;
-        margin:  auto;
+        margin: auto;
         margin-left: 50%;
     }
-    .apply_button{
+
+    .apply_button {
         background-color: #C75934;
         border: none;
-        padding: 3px 10px;
+        padding: 5px 7px;
         border-radius: 5px;
         margin-left: 20px;
+        margin-top:64px !important;
         color: #fff;
     }
+    .top_third .apply_button {
+        width: 130px;
+        height: 35px;
+        text-align:center;
+    }
+    .apply_button{
+        position: absolute;
+    z-index: 10000;
+}
+
     .carousel_main {
         margin-top: 2%;
         height: 300px;
     }
+
     .carousel_main img {
         width: 100%;
         height: 300px;
         object-fit: cover;
     }
+
     nav.navbar {
         width: 100%;
         left: 0%;
         z-index: 99;
-      }
+    }
+
     a.nav-link {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         padding-left: 5%;
     }
+
     .mission_vision_goal {
         display: none;
     }
+
     .card_main {
         margin-top: 3%;
     }
+
     .study_abroad {
         margin-top: 5%;
     }
+
     .after_line_abroad {
         width: 30%;
         margin-bottom: 3% !important;
     }
+
     .study_abroad {
         background: none;
     }
+
     .services_key {
         display: flex;
         flex-direction: column;
         margin-top: 3%;
     }
+
     .services_content {
         text-align: center;
         margin-top: 1%;
     }
+
     .services_image {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .services_image img {
         width: 300px !important;
         height: 200px;
     }
-    .offcanvas-body{
+
+    .offcanvas-body {
         overflow-x: hidden;
     }
+
     .testimonial_main img {
         height: 100px !important;
         width: 100px !important;
         border-radius: 50%;
         left: 43%;
     }
+
     .after_line_testimonials {
         width: 45%;
         height: 3px;
         background-color: #c75934;
-    } 
+    }
+
     .testimonial_second p {
         text-align: justify;
     }
+
     .testimonial_second {
         margin-top: 7% !important;
     }
+
     .testimonial_second h5 {
         padding-top: 8%;
     }
+
     .callback_form button {
         width: 25%;
         margin-bottom: 2%;
     }
+
     .callback_form input {
         width: 60%;
     }
+
     .copy_right {
         text-align: center;
     }
+
     .onviro {
         text-align: center;
     }
+
     .about_details p img {
         width: 100% !important;
     }
-    .about_details p{
-        display: grid!important;
+
+    .about_details p {
+        display: grid !important;
         flex-direction: column !important;
         text-align: justify;
     }
-    .banner_main img{
+
+    .banner_main img {
         background-size: cover;
         height: 210px !important;
         width: 100%;
     }
-    .banner::after{
+
+    .banner::after {
         height: 100% !important;
     }
-    .message_banner img{
+
+    .message_banner img {
         height: 210px;
         width: 100% !important;
     }
+
     .apply_preparation {
         margin-top: 3% !important;
     }
+
     .course_logo {
         height: 70px !important;
         width: 70px !important;
         margin-top: -25% !important;
         margin-left: 25% !important;
-    
+
     }
+
     .course_logo img {
         height: 90%;
         width: 90%;
@@ -160,11 +229,13 @@
         margin-left: 4px !important;
         margin-top: 3px !important;
     }
+
     .after_line_courses {
         width: 48% !important;
     }
-  }
-  @media (min-width: 1000px){
+}
+
+@media (min-width: 1000px) {
     .react-tabs__tab-list {
         width: 100%;
         background-color: #1174BC;
@@ -173,43 +244,29 @@
         justify-content: space-evenly;
         height: fit-content;
     }
-
-    
-  }
-  @media (max-width:1200px){
-    .above_abroad {
-        left: 22%;
-    }
-    .top_third .apply_button {
-        width: 135px;
-        height: 38px;
-    
-    }
-    .apply_button{
-        position: absolute;
-        
-        z-index: 9999;
-        right: 21px;
-    }
-.offcanvas{
-    z-index: 10000;
 }
-  }
-  @media (max-width:1000px) and (min-width:765px){
+
+
+
+@media (max-width:1000px) and (min-width:765px) {
     .card_col {
         width: 100%;
     }
+
     .card_image {
         width: 100%;
         height: 200px;
     }
+
     .above_abroad {
         left: 40%;
     }
+
     .circle {
         width: 55px;
         height: 55px;
     }
+
     .circle img {
         width: 50px;
         height: 50px;
@@ -220,20 +277,23 @@
     .about_us {
         margin-top: 5%;
     }
-    .index_about_img img{
+
+    .index_about_img img {
         width: 100%;
         height: 200px;
         object-fit: cover;
     }
+
     .above_abroad {
         position: absolute;
         height: 120px;
-        width:120px;
+        width: 120px;
         top: 40%;
         left: 38%;
         background-color: #fff;
         border-radius: 50%;
     }
+
     .above_abroad img {
         width: 105px;
         height: 105px;
@@ -244,55 +304,72 @@
         left: 6.5%;
         display: block;
     }
+
     .card_main h6 {
         margin-top: 15%;
     }
+
     .services_image img {
         object-fit: contain;
     }
+
     .information {
         display: grid !important;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
     .why_individual {
         width: 100% !important;
     }
+
     .course_logo {
         position: relative;
         margin-top: -25% !important;
         margin-left: 20% !important;
-    
+
+    }
+    .apply_button{
+        top: 12px !important;
+    }
+    .book_appointment{
+        margin: 2%;
     }
 
 
-    
-  }
-  @media (max-width:765px){
-    .top_third  {
+
+}
+
+@media (max-width:765px) {
+    .top_third {
         display: block;
         margin: 0 auto;
     }
+
     .functions_column {
         margin-top: 2%;
     }
+
     .main_logo {
         margin-top: 2%;
-        justify-content:center;
+        justify-content: center;
     }
-    .index_about_img img{
+
+    .index_about_img img {
         width: 100%;
         height: 200px;
         object-fit: cover;
     }
+
     .above_abroad {
         position: absolute;
         height: 100px;
-        width:100px;
+        width: 100px;
         top: 34%;
         left: 36%;
         background-color: #fff;
         border-radius: 50%;
     }
+
     .above_abroad img {
         width: 85px;
         height: 85px;
@@ -302,168 +379,161 @@
         top: 7%;
         left: 7%;
         display: block;
-        
+
     }
+
     .card_main h6 {
         margin-top: 15%;
     }
+
     .after_line_services {
         width: 30%;
         height: 3px;
         background-color: #c75934;
-        margin-bottom:2% !important;
+        margin-bottom: 2% !important;
         margin: 5px 44%;
     }
+
     .services_motto {
         margin-top: 5%;
     }
+
     .services_image img {
-      width: 80%;
+        width: 80%;
     }
+
     .after_line_associations {
         width: 45%;
     }
+
     .index_about_content {
         padding-left: 3%;
         margin-top: 3%;
     }
+
     .testimonial_main img {
         left: 35%;
     }
+
     .testimonial_second {
         margin-top: 5%;
     }
+
     .testimonial_second p {
         text-align: center !important;
         padding-left: 10px;
         padding-top: 10px;
     }
+
     .testimonial_second {
         margin-top: 11% !important;
     }
+
     .testimonial_second h5 {
         padding-top: 18% !important;
     }
+
     .after_line_news {
         width: 35%;
         height: 3px;
         background-color: #c75934;
-        margin-bottom:2% !important;
+        margin-bottom: 2% !important;
         margin-left: 38%;
     }
-    .index_callback img{
+
+    .index_callback img {
         display: none;
     }
-    .services_banner::after{
+
+    .services_banner::after {
         content: "";
         position: absolute;
         left: 0;
         width: 100%;
         height: 251px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
     }
-    .services_banner img{
+
+    .services_banner img {
         width: 100%;
         height: 250px;
         object-fit: cover;
     }
+
     .banner_above {
         flex-direction: column !important;
         top: 40% !important;
         left: 23% !important;
     }
-    .abroads_banner  img{
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-.abroads_banner::after{
-    height: 250px;
-}
-.abroads_banner h5{
-    left: 30% !important;
-   
-}
-.information {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr ;
-}
-.about_us_banner img{
-    background-size: cover;
-    height: 250px;
-    width: 100%;
 
-}
-.after_line_why {
-    width: 30% !important;
-}
-.after_line_teams {
-    width: 25% !important;
-}
-.course_logo {
-    position: relative;
-    margin-top: -10% !important;
-    margin-left: 38% !important;
-
-}
-.individual_image img {
-    width: 100%;
-    height: 150px !important;
-    object-fit: cover;
-}
-.after_line_events {
-    width: 30%;
-}
-
-  }
-  @media (max-width:765px){
-    .logo_main {
-       padding-top: 2%;
+    .abroads_banner img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
     }
+
+    .abroads_banner::after {
+        height: 250px;
+    }
+
+    .abroads_banner h5 {
+        left: 30% !important;
+
+    }
+
+    .information {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about_us_banner img {
+        background-size: cover;
+        height: 250px;
+        width: 100%;
+
+    }
+
+    .after_line_why {
+        width: 30% !important;
+    }
+
+    .after_line_teams {
+        width: 25% !important;
+    }
+
+    .course_logo {
+        position: relative;
+        margin-top: -10% !important;
+        margin-left: 38% !important;
+
+    }
+
+    .individual_image img {
+        width: 100%;
+        height: 150px !important;
+        object-fit: cover;
+    }
+
+    .after_line_events {
+        width: 30%;
+    }
+
+}
+
+@media (max-width:765px) {
+    .logo_main {
+        padding-top: 2%;
+    }
+
     .top_third {
         margin-top: 3%;
         text-align: center;
     }
-    .apply_col {
-        margin-top: 3%;
-        z-index: 5;
+
+    .top_third  {
+        display: block;
+        margin: 0 auto;
     }
-  
-  
-  }
-  @media (max-width:400px){
-    .apply_button{
-        position: absolute;
-        top: 77px;
-        z-index: 9999;
-        right: 21px;
-    }
-  }
-  @media (min-width:400px) and (max-width:450px){
-    .apply_button{
-       
-        top: 81px;
-       
-    }
-  }
-  @media (min-width:450px) and (max-width:525px){
-    .apply_button{
-       
-        top: 86px;
-      
-    }
-  }
-  @media (min-width:525px) and (max-width:766px){
-    .apply_button{
-        
-        top: 91px;
-       
-    }
-  }
-  @media (min-width:766px) and (max-width:1000px){
-    .apply_button{
-       
-        top: 68px;
-       
-    }
-  }
+
+
+}
