@@ -146,7 +146,7 @@ const NavBar = ({ navData }) => {
                   <Nav.Link as={Link} to={"/courses"} onClick={closeOffCanvas}className={(pathname === "/courses") ? 'active' : ''}>Courses</Nav.Link>
                   <Nav.Link as={Link} to={"/gallery"} onClick={closeOffCanvas} className={(pathname === "/gallery") ? 'active' : ''}>Gallery</Nav.Link>
                   <Nav.Link as={Link} to={"/information"} onClick={closeOffCanvas} className={(pathname === "/information") ? 'active' : ''}>Information</Nav.Link>
-                  <Nav.Link as={Link} to={"/events"} onClick={closeOffCanvas}style={{color:"#a80a0a"}} className={(pathname === "/events") ? 'active' : ''}>Events</Nav.Link>
+                  <Nav.Link as={Link} to={"/events"} onClick={closeOffCanvas}style={{color:"rgb(242 64 19)"}} className={(pathname === "/events") ? 'active' : ''}>Events</Nav.Link>
                   <Nav.Link as={Link} to={"/contactus"} onClick={closeOffCanvas} className={(pathname === "/contactus") ? 'active' : ''}>Contact Us</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
