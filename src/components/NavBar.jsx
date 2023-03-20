@@ -73,7 +73,7 @@ const NavBar = ({ navData }) => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-between flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to={"/"} data-bs-dismiss="offcanvas" onClick={closeOffCanvas}>Home</Nav.Link>
+                  <Nav.Link as={Link} to={"/"} data-bs-dismiss="offcanvas" onClick={closeOffCanvas} >Home</Nav.Link>
                   {
                     navbarData && navbarData?.length > 0 ? (
                       <NavDropdown title="Services" id={`offcanvasNavbarDropdown-expand-${expand}`}>

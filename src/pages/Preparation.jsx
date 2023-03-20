@@ -9,23 +9,32 @@ import { Helmet } from 'react-helmet'
 
 const Preparation = ({ props }) => {
     const [preparationData, setPreparationData] = React.useState({})
+    const [isLoading, setIsLoading] = React.useState(true)
     const { slug } = useParams();
 
     useEffect(() => {
         axiosBaseURL.get(`/api/preparation/${slug}`)
             .then((res) => {
                 setPreparationData(res.data);
+                setIsLoading(false);
             })
             .catch((err) => {
                 console.log(err)
+                isLoading(true)
             })
-    }, [props?.match?.params?.slug, slug]);
+    }, [props?.match?.params?.slug, slug, isLoading]);
     const id = preparationData?.preparation?.id;
     return (
         <>
-            <Helmet>
-                <title>{`${preparationData?.preparation?.title} | Preperation` }</title>
+            {isLoading ? <><Helmet>
+                <title>Preparation |</title>
             </Helmet>
+            </> :
+                <Helmet>
+                    <title>{`Preparation | ${preparationData?.preparation?.title} `}</title>
+                </Helmet>
+            }
+
             <div className='preparation_main'>
                 <div className="banner_main">
                     <div className="banner">

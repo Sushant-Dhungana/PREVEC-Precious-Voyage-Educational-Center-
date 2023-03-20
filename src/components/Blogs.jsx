@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/newsevents.css'
 import { Link } from 'react-router-dom'
-const newsUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com"
+import { baseUrl } from '../baseUrl'
 
 
 const Blogs = ({ news }) => {
@@ -16,7 +16,7 @@ const Blogs = ({ news }) => {
                             <div className="col-md-3" key={index}>
                                 <div className='news_card'>
                                     <div className="image_section">
-                                        <img src={newsUrl+"/images/news/" + item.image} alt="news_image" />
+                                        <img src={baseUrl+"/images/news/" + item.image} alt="news_image" />
                                         <p>{new Date(item.created_at).toLocaleDateString()}</p>
                                     </div>
                                     <Link to={`/information/${item?.id}`} ><h6>{item.description.replace(regex, '').substring(0, 25)}</h6></Link>

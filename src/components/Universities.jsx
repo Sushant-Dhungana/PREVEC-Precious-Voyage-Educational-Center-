@@ -3,8 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/universities.css";
-
-const universitiesUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/"
+import { baseUrl } from '../baseUrl';
 
 const Universities = (data) => {
     const  universities =data ;
@@ -38,7 +37,7 @@ const Universities = (data) => {
                 {
                     universities?.data && universities?.data?.map((item, index) => (
                         <div className='universitiess_main' key={index}>
-                            <img src={universitiesUrl+item?.university_image} alt={item.abroad_study_id} />
+                            <img src={baseUrl+item?.university_image} alt={item.abroad_study_id} />
                             </div>
                     ))
                 }

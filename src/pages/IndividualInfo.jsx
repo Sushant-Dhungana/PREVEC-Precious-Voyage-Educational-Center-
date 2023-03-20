@@ -9,8 +9,6 @@ import "../styles/responsive.css"
 import { Helmet } from 'react-helmet'
 import { baseUrl } from '../baseUrl'
 
-const imageBaseUrl = "http://precious-voyage.onvirotech.com";
-
 const IndividualInfo = ({ props }) => {
   const { id } = useParams()
   console.log(id);

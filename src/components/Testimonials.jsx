@@ -3,9 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/testimonials.css"
-
-
-const testimonialUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com/images/testimonal/"
+import { baseUrl } from '../baseUrl';
 
 const Testimonials = ({ testimonal }) => {
     const testimonials = testimonal;
@@ -40,7 +38,7 @@ const Testimonials = ({ testimonal }) => {
                         {
                             testimonials && testimonials.map((item, index) => (
                                 <div className='testimonial_main' key={index}>
-                                    <img src={testimonialUrl+ item.image} alt={item.title} />
+                                    <img src={baseUrl+"/images/testimonal/"+ item.image} alt={item.title} />
                                     <div className="testimonial_second">
                                         <h5>{item.title}</h5>
                                         <h6>{item.role}</h6>

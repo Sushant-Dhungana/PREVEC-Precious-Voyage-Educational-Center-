@@ -6,6 +6,7 @@ import "../styles/button.css"
 import SpinnerMain from '../components/Spinner';
 import { Helmet } from 'react-helmet';
 import { baseUrl } from '../baseUrl';
+import { Link } from 'react-router-dom';
 
 const Courses = () => {
 
@@ -56,7 +57,7 @@ const Courses = () => {
                                                     </div>
                                                     <h4>{eq?.title}</h4>
                                                     <div className="enroll_button">
-                                                        <button>Enroll Now</button>
+                                                        <button><Link to={"/contactus"}>Enroll Now</Link></button>
                                                     </div>
                                                 </div>
                                             </div>

@@ -25,7 +25,7 @@ const Events = () => {
     return (
         <div>
             <Helmet>
-                <title>Events and Blogs</title>
+                <title>Events (past and future)</title>
             </Helmet>
             <div className="banner_main">
                 <div className="banner">

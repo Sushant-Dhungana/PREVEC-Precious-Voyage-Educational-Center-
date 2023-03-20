@@ -1,7 +1,6 @@
 import React from 'react'
-
 import '../styles/indexservices.css';
-const mvgUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com"
+import { baseUrl } from '../baseUrl';
 
 const OurServices = (props) => {
   const services = props.services
@@ -21,7 +20,7 @@ const OurServices = (props) => {
                       <p dangerouslySetInnerHTML={{__html:item.description}}></p>
                     </div>
                     <div className="col-md-3 services_image">
-                      <img src={mvgUrl +"/images/service/"+ item.image} alt="logo" />
+                      <img src={baseUrl +"/images/service/"+ item.image} alt="logo" />
                     </div>
                     </div>
                 )
@@ -29,7 +28,7 @@ const OurServices = (props) => {
                 return (
                    <div className="services_key" key={index}>
                     <div className="col-md-3 services_image">
-                      <img src={mvgUrl +"/images/service/"+ item.image} alt="logo" />
+                      <img src={baseUrl +"/images/service/"+ item.image} alt="logo" />
                     </div>
                     <div className="col-md-9 services_content">
                       <h4>{item.title}</h4>

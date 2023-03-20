@@ -33,7 +33,7 @@ const App = () => {
       setIndexData(res.data);
       setLoading(false);
     })
-  }, [setIndexData])
+  }, []);
   // console.log(indexData);
   // const studyAbroad = homeData.abroads;
 
@@ -44,9 +44,9 @@ const App = () => {
 
           <>
           {
-            indexData && indexData?.setting?.map((item) => {
+            indexData && indexData?.setting?.map((item,index) => {
               return (
-                <Helmet>
+                <Helmet key={index}>
                   <meta charSet="utf-8" />
                   <title>{item.meta_title}</title>
                   <meta name="description" content={item?.meta_description} />
@@ -77,7 +77,7 @@ const App = () => {
               <Route path="/events" element={<Events />} />
               <Route path='/gallery' element={<Gallery />} />
             </Routes>
-            <Footer />
+            <Footer footerData = {indexData?.setting} />
           </>
       }
     </div>

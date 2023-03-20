@@ -5,8 +5,7 @@ import axiosBaseURL from "../baseUrl";
 import ImageViewer from "react-simple-image-viewer";
 import SpinnerMain from "../components/Spinner";
 import { Helmet } from "react-helmet";
-
-const imageUrl = "http://precious-voyage.onvirotech.com/images/gallery/";
+import { baseUrl } from "../baseUrl";
 
 const Gallery = () => {
   const [gallery, setGallery] = React.useState([]);
@@ -40,7 +39,7 @@ const Gallery = () => {
   const images = gallery?.galleries;
 
   const imagesMain = images?.map((image) => {
-    return imageUrl + image.image;
+    return baseUrl+"/images/gallery/" + image.image;
   });
   return (
     <div>
@@ -71,7 +70,7 @@ const Gallery = () => {
               {images?.map((image, index) => (
                 <div className="col-md-3 gallery_images" key={index}>
                   <img
-                    src={imageUrl + image.image}
+                    src={baseUrl+"/images/gallery/" + image.image}
                     alt="gallery"
                     className="gallery_image"
                     onClick={() => openImageViewer(index)}

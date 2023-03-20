@@ -93,6 +93,10 @@
     transition: ease all 0.5s;
     margin-top: 4%;
 }
+.enroll_button button a {
+    text-decoration: none;
+    color: #fff;
+}
 
 .enroll_button button:hover {
     background-color: #ffffff;

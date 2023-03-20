@@ -44,6 +44,7 @@
     }
 
     .top_second {
+        margin-bottom: 2%;
         justify-content: center !important;
     }
 
@@ -516,6 +517,9 @@
 
     .after_line_events {
         width: 30%;
+    }
+    .apply_col {
+        margin-top: 3%;
     }
 
 }

@@ -6,6 +6,7 @@ import {MdEmail} from 'react-icons/md'
 import {ImLocation,ImWhatsapp} from 'react-icons/im'
 import { toast, ToastContainer } from 'react-toastify';
 import axiosBaseURL from '../baseUrl';
+import { Helmet } from 'react-helmet'
 
 const ContactUs = () => {
     const [contactUs, setContactUs] = React.useState({
@@ -54,6 +55,9 @@ const ContactUs = () => {
 }
     return (
         <div>
+            <Helmet>
+                <title>Contact Us</title>
+            </Helmet>
             <div className="banner_main">
                 <div className="banner">
                     <img src={bannerContact} alt="information" />

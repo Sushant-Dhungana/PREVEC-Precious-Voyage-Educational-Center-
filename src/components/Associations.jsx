@@ -3,8 +3,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import "../styles/associations.css"
-
-const associationsUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com"
+import { baseUrl } from '../baseUrl';
 
 const Associations = ({association}) => {
     const associations = association;
@@ -43,7 +42,7 @@ const Associations = ({association}) => {
     <div>
 <OwlCarousel className="slider-items owl-carousel" {...options}>
     {associations && associations.map((item, index) => (
-                      <div className="item" key={index}><img src={associationsUrl+"/images/association/" + item.image} alt={item.id}/></div>
+                      <div className="item" key={index}><img src={baseUrl+"/images/association/" + item.image} alt={item.id}/></div>
     ))}
 
                   </OwlCarousel>

@@ -32,7 +32,7 @@ const Services = (props) => {
    {
                   serviceData?.services?.map((item, index) => (
                     <Helmet key={index}>
-                      <title>{`${item?.title} | Services`}</title>
+                      <title>{` Services | ${item?.title} `}</title>
                     </Helmet>
                   ))
    }

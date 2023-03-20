@@ -36,10 +36,10 @@ const MessageCEO = () => {
                             <h5>{messageData?.ceo?.title}</h5>
                             <p>Founder Ceo</p>
                             <div className="social_media_links">
-                                <a href={messageData?.ceo?.facebook}><AiFillFacebook size={30} style={{ color: "#3b5998" }} /></a>
-                                <a href={messageData?.ceo?.twitter}> <AiOutlineTwitter size={30} style={{ color: "#00acee " }} /> </a>
-                                <a href={messageData?.ceo?.linkedin}><AiFillLinkedin size={30} style={{ color: "#0072b1" }} /></a>
-                                <a href={`tel:${messageData?.ceo?.whatsapp}`}><AiOutlineWhatsApp size={30} style={{ color: "#25D366" }} /></a>
+                                <a href={messageData?.ceo?.facebook} target="_blank" rel="noreferrer"><AiFillFacebook size={30} style={{ color: "#3b5998" }} /></a>
+                                <a href={messageData?.ceo?.twitter} target="_blank" rel="noreferrer"> <AiOutlineTwitter size={30} style={{ color: "#00acee " }} /> </a>
+                                <a href={messageData?.ceo?.linkedin} target="_blank" rel="noreferrer"><AiFillLinkedin size={30} style={{ color: "#0072b1" }} /></a>
+                                <a href={`tel:${messageData?.ceo?.whatsapp}`} target="_blank" rel="noreferrer"><AiOutlineWhatsApp size={30} style={{ color: "#25D366" }} /></a>
                             </div>
                         </div>
                     </div>

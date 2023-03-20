@@ -1,6 +1,6 @@
 import React from 'react'
+import { baseUrl } from '../baseUrl';
 
-const abroadUrl = process.env.baseUrl || "http://precious-voyage.onvirotech.com"
 
 const StudyInIndividual = ({ abroadindividual }) => {
   const abroad = abroadindividual;
@@ -12,7 +12,7 @@ const StudyInIndividual = ({ abroadindividual }) => {
             <div className="col-md-3 functions_column" key={index}>
               <div className="function_section">
                 <div className="circle">
-                  <img src={abroadUrl + "/images/abroad/" + item.image} alt="logo" />
+                  <img src={baseUrl + "/images/abroad/" + item.image} alt="logo" />
                 </div>
                 <h5>{item.title}</h5>
               </div>

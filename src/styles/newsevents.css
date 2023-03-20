@@ -3,9 +3,13 @@
     height: fit-content;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     margin-bottom: 20px;
     margin-top: 4%;
+}
+.news_card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    transform: scale(1.01)
 }
 .news_card img {
     width: 100%;
@@ -46,6 +50,11 @@
     border-right: 0px solid transparent;
     border-top: 32px solid #c75934;
     transform: rotate(271deg);
+}
+.news_card a h6 p:hover {
+   color: #c75934 !important;
+    color: #fff;
+    transition: 0.5s;
 }
 .news_card a{
     text-decoration: none;

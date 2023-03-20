@@ -28,7 +28,6 @@ const Abroad = ({ props }) => {
       .then(res => {
         setAbroadPageData(res.data);
         setIsLoading(false);
-
       }
       )
       .catch(err => console.log(err))
@@ -37,16 +36,23 @@ const Abroad = ({ props }) => {
 
   return (
     <>
-    <Helmet>
-      <title> Abroad Study</title>
+    {isLoading? <><Helmet>
+      <title>Study in |</title>
+      </Helmet>
+      </> :
+      <Helmet>
+      <title> Study in | {`${abroadData?.title}`}</title>
     </Helmet>
+      }
+      
       {isLoading ? <SpinnerMain /> :
         <div>
+    
           <div className="abroads_main">
             <div className="abroads_banner">
-              <img src={baseUrl+"/images/abroad/banner/" + abroadData?.banner} alt="abroad study" />
+              <img src={baseUrl + "/images/abroad/banner/" + abroadData?.banner} alt="abroad study" />
               <div className="banner_above">
-                <img src={baseUrl +"/images/abroad/" + abroadData?.image} alt="abroad study" />
+                <img src={baseUrl + "/images/abroad/" + abroadData?.image} alt="abroad study" />
                 <h5>{abroadData?.title}</h5>
               </div>
             </div>
@@ -108,32 +114,32 @@ const Abroad = ({ props }) => {
                           <Tab>Others</Tab>
                         </TabList>
                         <TabPanel>
-                          <p dangerouslySetInnerHTML={{__html:abroadData?.why}}></p>
+                          <p dangerouslySetInnerHTML={{ __html: abroadData?.why }}></p>
                         </TabPanel>
                         <TabPanel>
-                        <p dangerouslySetInnerHTML={{__html:abroadData.career_opportunity}}></p>
+                          <p dangerouslySetInnerHTML={{ __html: abroadData.career_opportunity }}></p>
                         </TabPanel>
                         <TabPanel>
-                        <p dangerouslySetInnerHTML={{__html:abroadData.work_while_studying}}></p>
-                        </TabPanel> 
+                          <p dangerouslySetInnerHTML={{ __html: abroadData.work_while_studying }}></p>
+                        </TabPanel>
                         <TabPanel>
-                        <p dangerouslySetInnerHTML={{__html:abroadData.other}}></p>
+                          <p dangerouslySetInnerHTML={{ __html: abroadData.other }}></p>
                         </TabPanel>
                       </Tabs>
                     </div>
                   </div>
                   <div className="col-md-12">
                     <div className="description_main">
-                    <p dangerouslySetInnerHTML={{__html:abroadData.description}}></p>
+                      <p dangerouslySetInnerHTML={{ __html: abroadData.description }}></p>
                     </div>
                   </div>
                   <div className="col-md-12">
                     <div className="universities_main">
                       <div className="university_head">
-                      <h4>Universities in {abroadData.title}</h4>
-                      <div className="after_line_university"></div>
+                        <h4>Universities in {abroadData.title}</h4>
+                        <div className="after_line_university"></div>
                       </div>
-                          <Universities data = {abroadData?.universities} />
+                      <Universities data={abroadData?.universities} />
                     </div>
                   </div>
 
