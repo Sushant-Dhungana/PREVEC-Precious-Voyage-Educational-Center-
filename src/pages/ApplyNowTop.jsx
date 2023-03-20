@@ -8,6 +8,9 @@ import axiosBaseURL from '../baseUrl';
 import { Helmet } from 'react-helmet';
 
 const ApplyNowTop = () => {
+    React.useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
     const initialStates = {
         full_name: '',
         email: '',

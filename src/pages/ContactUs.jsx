@@ -9,6 +9,10 @@ import axiosBaseURL from '../baseUrl';
 import { Helmet } from 'react-helmet'
 
 const ContactUs = () => {
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
     const [contactUs, setContactUs] = React.useState({
         name: '',
         email: '',

@@ -14,6 +14,7 @@ const Courses = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        window.scrollTo(0, 0)
         axiosBaseURL.get(`/api/course`)
             .then((res) => {
                 setLoading(false);
@@ -22,7 +23,7 @@ const Courses = () => {
             .catch((err) => {
                 console.log(err)
             })
-    }, [])
+    }, []);
 
     return (
         <div>

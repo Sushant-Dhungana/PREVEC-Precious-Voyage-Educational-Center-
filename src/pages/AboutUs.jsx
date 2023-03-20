@@ -13,6 +13,7 @@ const AboutUs = () => {
   const [aboutUsData, setAboutUsData] = React.useState({})
 
   React.useEffect(() => {
+      window.scrollTo(0, 0)
     axiosBaseURL.get("/api/about-us", {
 
     })

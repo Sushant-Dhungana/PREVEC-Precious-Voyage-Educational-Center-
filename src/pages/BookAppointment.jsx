@@ -11,6 +11,10 @@ import { Helmet } from 'react-helmet'
 
 
 const BookAppointment = () => {
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
     const initialState= {
         fullname: '',
         email: '',

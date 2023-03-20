@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiOutlineCopyright } from "react-icons/ai"
 
 const Footer = ({ footerData }) => {
-  const footer = footerData;
+  const footer = footerData?.setting;
+  const studyAbroad = footerData?.abroads;
+  const preparation = footerData?.preparation;
   return (
     <div>
       <div className="footer_main">
@@ -25,18 +27,18 @@ const Footer = ({ footerData }) => {
             </div>
             <div className="col-md-3 footer_services">
               <h5>Services</h5>
-              <Link to={'/bookappointment'}>
-                Book Appointment</Link>
-              <Link to={'/applynow'}>
-                Apply Now</Link>
-              <Link to={'/events'}>
-                events</Link>
+              {studyAbroad && studyAbroad.map((item, index) => (
+                <Link to={`/abroad-study/${item?.id}`} key={index}>
+                  {item.title}</Link>
+              ))}
+              {
+                preparation && preparation.map((item, index) => (
+                  <Link to={`/preparation/${item?.slug}`} key={index}>
+                    {item?.title}</Link>
+                ))
+              }
               <Link to={'/courses'}>
                 Courses</Link>
-              <Link to={'/abroad-study/2'}>
-                Study In Australia</Link>
-                <Link to={'/preparation/ielts'}>
-                Ielts Preperation</Link>
             </div>
             <div className="col-md-3 other_links">
               <h5>Other Links</h5>
@@ -44,9 +46,13 @@ const Footer = ({ footerData }) => {
                 Privacy Policy</Link>
               <Link to={'/'}>
                 Terms and Conditions</Link>
+                <Link to={'/bookappointment'}>
+                  Book Appointment</Link>
+                  <Link to={'/applynow'}>
+                  Apply Now</Link>
             </div>
             <div className="col-md-3 map_section">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14129.27358663339!2d85.317794!3d27.707454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18e34b2fb8b9%3A0x5d15f2ed30d392bb!2sPrecious%20Voyage%20Educational%20Centre%20(P)%20Ltd!5e0!3m2!1sen!2snp!4v1679289085192!5m2!1sen!2snp" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title='footer'></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14129.27358663339!2d85.317794!3d27.707454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18e34b2fb8b9%3A0x5d15f2ed30d392bb!2sPrecious%20Voyage%20Educational%20Centre%20(P)%20Ltd!5e0!3m2!1sen!2snp!4v1679289085192!5m2!1sen!2snp" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title='footer'></iframe>
               <div className="social_media_links">
                 {footer && footer.map((item, index) => (
                   <div className="social_links" key={index}>

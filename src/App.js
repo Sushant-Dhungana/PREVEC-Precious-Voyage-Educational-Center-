@@ -27,6 +27,7 @@ const App = () => {
   const [indexData, setIndexData] = useState(null);
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
     axiosBaseURL.get("/api/index", {                     
     }).then((res) => {
@@ -77,7 +78,7 @@ const App = () => {
               <Route path="/events" element={<Events />} />
               <Route path='/gallery' element={<Gallery />} />
             </Routes>
-            <Footer footerData = {indexData?.setting} />
+            <Footer footerData = {indexData} />
           </>
       }
     </div>

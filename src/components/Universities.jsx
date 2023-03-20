@@ -37,7 +37,7 @@ const Universities = (data) => {
                 {
                     universities?.data && universities?.data?.map((item, index) => (
                         <div className='universitiess_main' key={index}>
-                            <img src={baseUrl+item?.university_image} alt={item.abroad_study_id} />
+                            <img src={ baseUrl + "/" +item?.university_image} alt={item.abroad_study_id} />
                             </div>
                     ))
                 }
