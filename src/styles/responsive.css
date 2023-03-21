@@ -426,8 +426,9 @@
 
     .testimonial_second p {
         text-align: center !important;
-        padding-left: 10px;
+        padding-left: 3px !important;
         padding-top: 10px;
+        padding-right: 3px !important;
     }
 
     .testimonial_second {

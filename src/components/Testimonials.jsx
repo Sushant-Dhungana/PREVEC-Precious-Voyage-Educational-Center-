@@ -42,7 +42,7 @@ const Testimonials = ({ testimonal }) => {
                                     <div className="testimonial_second">
                                         <h5>{item.title}</h5>
                                         <h6>{item.role}</h6>
-                                        <p>{item.description.substring(0, 250)}</p>
+                                        <p>{item.description.substring(0, 180)}</p>
                                     </div>
                                 </div>
                             )
