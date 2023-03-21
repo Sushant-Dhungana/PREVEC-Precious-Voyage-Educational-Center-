@@ -21,7 +21,7 @@ const Footer = ({ footerData }) => {
               <Link to={'/information'}>
                 Information</Link>
               <Link to={'/messagefromceo'}>
-                Message From Ceo</Link>
+                Message From CEO</Link>
               <Link to={'/contactus'}>
                 Contact Us</Link>
             </div>

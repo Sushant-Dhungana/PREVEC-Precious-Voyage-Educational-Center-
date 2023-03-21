@@ -17,7 +17,7 @@
 .why {
     margin-top: 3% !important;
     background-color: #F6FBFF;
-    padding-bottom: 5px;
+    padding-bottom: 30px;
 }
 
 .why_head {
@@ -116,6 +116,7 @@
     height: 130px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    object-fit: cover;
 }
 .our_team_card h5{
     padding-top: 2%;

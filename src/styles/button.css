@@ -57,10 +57,16 @@
     border: 1px solid #1174BC;
     transition: ease all 0.5s;
 }
+.read_more a {
+    text-decoration: none !important;
+    color: #fff;
+}
 .read_more:hover {
     background-color: #ffffff;
     color: #1174BC;
-
+}
+.read_more a:hover {
+    color: #1174BC;
 }
 .callback_form button {
     width: 15%;

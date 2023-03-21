@@ -5,7 +5,7 @@ import "../styles/responsive.css"
 import { AiFillFacebook, AiOutlineTwitter, AiFillLinkedin, AiOutlineWhatsApp } from "react-icons/ai";
 import {BsFillCalendarCheckFill} from 'react-icons/bs';
 import axiosBaseURL from '../baseUrl';
-import NewsEvents from '../components/Blogs';
+import Blogs from '../components/Blogs';
 import "../styles/banner.css"
 import { Helmet } from 'react-helmet';
 import {baseUrl} from '../baseUrl';
@@ -56,14 +56,14 @@ const MessageCEO = () => {
               <div className="col-md-12 news_main">
                 <div className="news_header">
                   < BsFillCalendarCheckFill size={30} style={{ color: "rgb(167 4 4 / 69%)" }} />
-                  <h3>News & Events</h3>
+                  <h3>Blogs and Information</h3>
                 </div>
                 <div className="after_line_news"></div>
                 <h6>We are organizing the different workshop for the boosting student's confidence and to provide better knowledge about abroad life style.</h6>
               </div>
             </div>
           </div>
-                <NewsEvents news={messageData?.news?.slice(0,4)}/>
+                <Blogs news={messageData?.news?.slice(0,4)}/>
             </section>
         </div>
         </>

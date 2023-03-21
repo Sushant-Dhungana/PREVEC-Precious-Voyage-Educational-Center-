@@ -47,6 +47,30 @@ const Events = () => {
                             <div className="past_events">
                                 <div className="col-md-12">
                                     <div className="events_header">
+                                        <h4>UpComing Events</h4>
+                                        <div className="after_line_events"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            {
+                                events?.upComingEvents?.map((item, index) => (
+
+                                    <div className="col-md-3 card_cols" key={index}>
+                                        <Link to={`/information/${item?.id}`} >
+                                        <div className='news_card'>
+                                            <div className="image_section">
+                                                <img src={baseUrl +"/images/event/"+ item.image} alt="news_image" />
+                                                <p>{new Date(item?.event_date).toLocaleDateString([], { hour: '2-digit', minute: '2-digit' })}</p>
+                                            </div>
+                                            <h6 dangerouslySetInnerHTML={{ __html: item.description }}></h6>
+                                        </div>
+                                        </Link>
+                                    </div>
+
+                                ))}
+                            <div className="past_events">
+                                <div className="col-md-12">
+                                    <div className="events_header">
                                         <h4>Past Events</h4>
                                         <div className="after_line_events"></div>
                                     </div>
@@ -56,38 +80,19 @@ const Events = () => {
                             {
                                 events?.pastEvents?.map((item, index) => (
 
-                                    <div className="col-md-3" key={index}>
+                                    <div className="col-md-3 card_cols" key={index}>
+                                        <Link to={`/information/${item?.id}`}>
                                         <div className='news_card'>
                                             <div className="image_section">
                                                 <img src={baseUrl +"/images/event/"+ item.image} alt="news_image" />
                                                 <p>{new Date(item?.event_date).toLocaleDateString([], { hour: '2-digit', minute: '2-digit' })}</p>
                                             </div>
-                                            <Link to={`/information/${item?.id}`} ><h6 dangerouslySetInnerHTML={{ __html: item.description }}></h6></Link>
+                                            <h6 dangerouslySetInnerHTML={{ __html: item.description }}></h6>
                                         </div>
+                                        </Link>
                                     </div>
                                 ))}
-                            <div className="past_events">
-                                <div className="col-md-12">
-                                    <div className="events_header">
-                                        <h4>UpComing Events</h4>
-                                        <div className="after_line_events"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            {
-                                events?.upComingEvents?.map((item, index) => (
-
-                                    <div className="col-md-3" key={index}>
-                                        <div className='news_card'>
-                                            <div className="image_section">
-                                                <img src={baseUrl +"/images/event/"+ item.image} alt="news_image" />
-                                                <p>{new Date(item?.event_date).toLocaleDateString([], { hour: '2-digit', minute: '2-digit' })}</p>
-                                            </div>
-                                            <Link to={`/information/${item?.id}`} ><h6 dangerouslySetInnerHTML={{ __html: item.description }}></h6></Link>
-                                        </div>
-                                    </div>
-
-                                ))}
+                            
                         </div>
                     </div>
 }  

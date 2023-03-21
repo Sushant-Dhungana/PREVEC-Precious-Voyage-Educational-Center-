@@ -20,6 +20,10 @@
     object-fit: cover;
     margin-bottom: 2%;
 }
-.image_service_content, .services_content_desc {
-   padding-top: 10% !important;
+.main_row {
+    margin-top: 2%;
+}
+.services_content_desc p {
+    padding-top: 0;
+    text-align: justify;
 }

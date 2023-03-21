@@ -234,6 +234,10 @@
     .after_line_courses {
         width: 48% !important;
     }
+    .apply_col {
+        margin-top: 1% !important;
+      
+    }
 }
 
 @media (min-width: 1000px) {
@@ -518,9 +522,7 @@
     .after_line_events {
         width: 30%;
     }
-    .apply_col {
-        margin-top: 3%;
-    }
+ 
 
 }
 

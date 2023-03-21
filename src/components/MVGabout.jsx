@@ -1,13 +1,11 @@
 import React from 'react'
-import '../styles/indexservices.css';
-import { baseUrl } from '../baseUrl';
+import { baseUrl } from '../baseUrl'
 
-const OurServices = (props) => {
-  const services = props.services
-
+const MVGabout = ({services}) => {
   return (
     <div>
-      <div className="container">
+
+<div className="container">
         <div className="row">
           
           {
@@ -20,7 +18,7 @@ const OurServices = (props) => {
                       <p dangerouslySetInnerHTML={{__html:item.description}}></p>
                     </div>
                     <div className="col-md-3 services_image">
-                      <img src={baseUrl +"/images/service/"+ item.image} alt="logo" />
+                      <img src={baseUrl +"/images/feature/"+ item.image} alt="logo" />
                     </div>
                     </div>
                 )
@@ -28,7 +26,7 @@ const OurServices = (props) => {
                 return (
                    <div className="services_key" key={index}>
                     <div className="col-md-3 services_image">
-                      <img src={baseUrl +"/images/services/"+ item.image} alt="logo" />
+                      <img src={baseUrl +"/images/feature/"+ item.image} alt="logo" />
                     </div>
                     <div className="col-md-9 services_content">
                       <h4>{item.title}</h4>
@@ -45,4 +43,4 @@ const OurServices = (props) => {
   )
 }
 
-export default OurServices;
+export default MVGabout

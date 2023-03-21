@@ -58,7 +58,7 @@ const Services = (props) => {
                       </div>
                       {index % 2 === 0 ? (
                         <div>
-                          <div className="row">
+                          <div className="row main_row">
                             <div className="col-md-4">
                               <div className="image_service_content">
                                 <img src={baseUrl +"/images/service/"+ item?.image} alt="service" className="image_service" />
@@ -74,7 +74,7 @@ const Services = (props) => {
                       )
                         : (
                           <div>
-                            <div className="row">
+                            <div className="row main_row">
                             <div className="col-md-8">
                               <div className="services_content_desc">
                                 <p dangerouslySetInnerHTML={{ __html: item?.description }}></p>
