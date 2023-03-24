@@ -1,7 +1,6 @@
 import React from 'react'
 import eventBanner from '../images/banner.png'
 import { BsFillCalendarCheckFill } from "react-icons/bs";
-import { Link } from 'react-router-dom';
 import axiosBaseURL from '../baseUrl';
 import Spinner from '../components/Spinner';
 import { Helmet } from 'react-helmet';
@@ -56,7 +55,7 @@ const Events = () => {
                                 events?.upComingEvents?.map((item, index) => (
 
                                     <div className="col-md-3 card_cols" key={index}>
-                                        <Link to={`/information/${item?.id}`} >
+                                       
                                         <div className='news_card'>
                                             <div className="image_section">
                                                 <img src={baseUrl +"/images/event/"+ item.image} alt="news_image" />
@@ -64,7 +63,7 @@ const Events = () => {
                                             </div>
                                             <h6 dangerouslySetInnerHTML={{ __html: item.description }}></h6>
                                         </div>
-                                        </Link>
+                                        
                                     </div>
 
                                 ))}
@@ -81,7 +80,7 @@ const Events = () => {
                                 events?.pastEvents?.map((item, index) => (
 
                                     <div className="col-md-3 card_cols" key={index}>
-                                        <Link to={`/information/${item?.id}`}>
+                                        
                                         <div className='news_card'>
                                             <div className="image_section">
                                                 <img src={baseUrl +"/images/event/"+ item.image} alt="news_image" />
@@ -89,7 +88,7 @@ const Events = () => {
                                             </div>
                                             <h6 dangerouslySetInnerHTML={{ __html: item.description }}></h6>
                                         </div>
-                                        </Link>
+                                   
                                     </div>
                                 ))}
                             

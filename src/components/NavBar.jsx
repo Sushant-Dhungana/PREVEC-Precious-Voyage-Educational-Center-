@@ -65,7 +65,7 @@ const NavBar = ({ navData }) => {
   //   );
   return (
     <>
-      {['xxl'].map((expand) => (
+      {[false, 'sm', 'md', 'lg', 'xl', 'xxl'].map((expand) => (
 
         <Navbar key={expand} expand={expand} className="mb-3 navbar_top">
           <Container fluid>

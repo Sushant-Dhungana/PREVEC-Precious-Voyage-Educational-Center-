@@ -8,11 +8,24 @@ import { toast, ToastContainer } from 'react-toastify';
 import axiosBaseURL from '../baseUrl';
 import { Helmet } from 'react-helmet'
 
-const ContactUs = () => {
+
+const ContactUs = () => {    
+    const [contactData, setContactData] = React.useState({});   
 
     React.useEffect(() => {
         window.scrollTo(0, 0)
+
+        axiosBaseURL.get(`/api/contact/index`)
+        .then(res => {
+          setContactData(res.data);
+    
+        }
+        )
+        .catch(err => console.log(err))
     }, []);
+    const contactUsData = contactData.setting;
+
+   
     const [contactUs, setContactUs] = React.useState({
         name: '',
         email: '',
@@ -115,7 +128,7 @@ const ContactUs = () => {
                                             <IoCall size={30} style={{ color: "#C75934" }} />
                                             <div className="individual_details">
                                                 <h5>Contact</h5>
-                                                <p>012345678</p>
+                                                <p>{contactUsData?.contact}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -125,7 +138,7 @@ const ContactUs = () => {
                                             <MdEmail size={30} style={{ color: "#C75934" }} />
                                             <div className="individual_details">
                                                 <h5>Email</h5>
-                                                <p>info@Example.Com</p>
+                                                <p>{contactUsData?.email}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -138,7 +151,7 @@ const ContactUs = () => {
                                                 <ImLocation size={30} style={{ color: "#C75934" }} />
                                                 <div className="individual_details">
                                                     <h5>Location</h5>
-                                                    <p>Bagabazar, 16-Pokhara</p>
+                                                    <p>{contactUsData?.location}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -147,7 +160,7 @@ const ContactUs = () => {
                                                 <ImWhatsapp size={30} style={{ color: "#C75934" }} />
                                                 <div className="individual_details">
                                                     <h5>WhatsApp</h5>
-                                                    <p>info@Example.Com</p>
+                                                    <p>{contactUsData?.fax}</p>
                                                 </div>
                                             </div>
                                         </div>
