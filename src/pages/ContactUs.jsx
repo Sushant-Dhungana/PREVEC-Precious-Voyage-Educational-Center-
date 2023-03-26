@@ -128,7 +128,7 @@ const ContactUs = () => {
                                             <IoCall size={30} style={{ color: "#C75934" }} />
                                             <div className="individual_details">
                                                 <h5>Contact</h5>
-                                                <p>{contactUsData?.contact}</p>
+                                                <p>npm startg{contactUsData?.contact}</p>
                                             </div>
                                         </div>
                                     </div>
